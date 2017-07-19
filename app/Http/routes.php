@@ -12,17 +12,6 @@
 */
 
 
-// 路由参数匹配
-// Route::get('zs/{name?}', function ($name = 345) {
-//     return $name;
-// })->where('name', '[0-9]+');
-
-// Route::get('posts/{post}/comments/{comment}', function ($postId, $commentId) {
-// 	var_dump($postId,$commentId);
-//     //
-// });
-Route::get('/', function () {
-    return view('index');
-});
-
+Route::get('/', 'Admin\Login\LoginController@index');
+Route::resource('login', 'Admin\Login\LoginController');
 
