@@ -2,218 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6757e88-3409-4aba-b30f-276ef708f162" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/bootstrap/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/bootstrap/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fancy-zoom/img/closebox.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/arrow-down.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/arrow-left.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/arrow-right.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/arrow-up.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/hs-2004-27-a-large_web.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/demos/cupertino/images/animated-overlay.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/demos/cupertino/images/ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/demos/cupertino/images/ui-bg_flat_15_cd0a0a_40x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/demos/cupertino/images/ui-bg_glass_100_e4f1fb_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/demos/cupertino/images/ui-bg_glass_50_3baae3_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/demos/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/demos/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/demos/cupertino/images/ui-bg_highlight-hard_70_000000_1x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/demos/cupertino/images/ui-bg_highlight-soft_100_deedf7_1x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/demos/cupertino/images/ui-bg_highlight-soft_25_ffef8f_1x100.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/demos/cupertino/images/ui-icons_2694e8_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/demos/cupertino/images/ui-icons_2e83ff_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/demos/cupertino/images/ui-icons_3d80b3_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/demos/cupertino/images/ui-icons_72a7cf_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/demos/cupertino/images/ui-icons_ffffff_256x240.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/bootstrap/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/bootstrap/css/bootstrap-theme.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/bootstrap/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/bootstrap/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/bootstrap/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/bootstrap/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/bootstrap/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/bootstrap/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/bootstrap/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fancy-zoom/css/fancyzoom.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fancy-zoom/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fancy-zoom/src/fancyzoom.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fancy-zoom/src/fancyzoom.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/API.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/FAQ.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/NEWS.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/PLUGINS.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/README.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/ajax.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/annotating.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/basic.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/data-eu-gdp-growth-1.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/data-eu-gdp-growth-2.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/data-eu-gdp-growth-3.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/data-eu-gdp-growth-4.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/data-eu-gdp-growth-5.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/data-eu-gdp-growth.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/data-japan-gdp-growth.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/data-usa-gdp-growth.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/graph-types.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/image.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/interacting-axes.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/interacting.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/layout.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/multiple-axes.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/navigate.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/percentiles.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/pie.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/realtime.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/resize.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/selection.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/setting-options.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/stacking.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/symbols.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/thresholding.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/time.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/tracking.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/turning-series.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/visitors.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/examples/zooming.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/excanvas.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/excanvas.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/jquery.colorhelpers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/jquery.flot.crosshair.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/jquery.flot.fillbetween.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/jquery.flot.image.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/jquery.flot.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/jquery.flot.navigate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/jquery.flot.pie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/jquery.flot.resize.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/jquery.flot.selection.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/jquery.flot.stack.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/jquery.flot.symbol.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/jquery.flot.threshold.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/flot/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/css/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/less/bordered-pulled.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/less/core.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/less/fixed-width.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/less/font-awesome.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/less/icons.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/less/larger.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/less/list.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/less/mixins.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/less/path.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/less/rotated-flipped.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/less/spinning.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/less/stacked.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/less/variables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/scss/_bordered-pulled.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/scss/_core.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/scss/_fixed-width.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/scss/_icons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/scss/_larger.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/scss/_list.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/scss/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/scss/_path.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/scss/_rotated-flipped.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/scss/_spinning.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/scss/_stacked.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/scss/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/font-awesome/scss/font-awesome.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/changelog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/demos/agenda-views.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/demos/basic-views.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/demos/cupertino/jquery-ui.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/demos/default.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/demos/external-dragging.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/demos/gcal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/demos/json-events.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/demos/json.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/demos/selectable.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/demos/theme.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/fullcalendar/fullcalendar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/fullcalendar/fullcalendar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/fullcalendar/fullcalendar.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/fullcalendar/fullcalendar.print.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/fullcalendar/gcal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/lib/jquery-ui.custom.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/lib/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/fullcalendar-1.6.4/license.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/jQuery-Knob/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/jQuery-Knob/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/jQuery-Knob/js/jquery.knob.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/jQuery-Knob/knob.jquery.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/jquery-1.11.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/jquery.imagesloaded.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/jquery.isotope.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/jquery.masonry.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/lib/jquery.peity.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/manage/index.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/temp/calendar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/temp/faq.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/temp/help.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/temp/media.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/temp/premium-blog-item.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/temp/premium-blog.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/temp/premium-build.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/temp/premium-colors.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/temp/premium-invoice.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/temp/premium-media.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/temp/premium-pricing-tables.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/temp/premium-profile.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/temp/premium-search-results.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/temp/premium-timeline.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/temp/premium-upgrade-account.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/temp/premium-users.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/temp/premium-widgets.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/temp/privacy-policy.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/temp/reset-password.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/temp/sign-in.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/temp/sign-up.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/temp/terms-and-conditions.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/temp/user.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/temp/users.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Controller.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/IndexController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/app.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/countent_vf.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/fbg_bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/gallery_1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/gallery_2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/gallery_3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/gallery_4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/gallery_5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/gallery_6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/img_1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/img_2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/img_main.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/l_menu.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/li_a.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/main_bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/r_menu.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/search.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/spacer.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/submit.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/teast_img_1.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/teast_img_2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/userpic.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/arial.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/cuf_run.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/cufon-yui.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Login/LoginController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Login/LoginController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
     </list>
     <ignored path="MyBlog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -238,7 +28,7 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/login/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.678571">
+            <state vertical-scroll-proportion="0.0">
               <caret line="94" column="12" selection-start-line="94" selection-start-column="47" selection-end-line="94" selection-end-column="53" />
               <folding />
             </state>
@@ -248,7 +38,7 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/temp/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.464286">
+            <state vertical-scroll-proportion="0.0">
               <caret line="199" column="11" selection-start-line="199" selection-start-column="11" selection-end-line="199" selection-end-column="11" />
               <folding />
             </state>
@@ -258,7 +48,7 @@
       <file leaf-file-name="calendar.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/temp/calendar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -280,7 +70,7 @@
       <file leaf-file-name="left.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/layout/left.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="165" column="15" selection-start-line="165" selection-start-column="15" selection-end-line="165" selection-end-column="15" />
               <folding />
             </state>
@@ -290,8 +80,8 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/manage/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.7142856">
-              <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -300,7 +90,7 @@
       <file leaf-file-name="ManageController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/Manage/ManageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.58117646">
+            <state vertical-scroll-proportion="-0.40235293">
               <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
               <folding>
                 <element signature="e#53#79#0#PHP" expanded="true" />
@@ -312,7 +102,7 @@
       <file leaf-file-name="Controller.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.178572">
+            <state vertical-scroll-proportion="0.0">
               <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="e#40#66#0#PHP" expanded="true" />
@@ -384,8 +174,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -632,6 +420,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -668,6 +458,11 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -692,7 +487,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="20" width="1346" height="688" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17518798" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -701,7 +496,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2496112" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16608997" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16608997" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -730,7 +525,23 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://D:/WEB-INFO/XAMPP/php/webdriver-test-example.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/login/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="94" column="12" selection-start-line="94" selection-start-column="47" selection-end-line="94" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/temp/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="199" column="11" selection-start-line="199" selection-start-column="11" selection-end-line="199" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/temp/calendar.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -738,11 +549,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/lib/jQuery-Knob/js/jquery.knob.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1401804182000" expanded="true" signature="6948:6969" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layout/left.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="165" column="15" selection-start-line="165" selection-start-column="15" selection-end-line="165" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/manage/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/Manage/ManageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#53#79#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#40#66#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/WEB-INFO/XAMPP/php/webdriver-test-example.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://D:/WEB-INFO/XAMPP/php/webdriver-test-example.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.714286">
           <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -750,9 +613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.5">
           <caret line="132" column="5" selection-start-line="132" selection-start-column="5" selection-end-line="132" selection-end-column="5" />
-          <folding>
-            <element signature="e#52#76#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -776,7 +636,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/temp/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.464286">
+        <state vertical-scroll-proportion="0.0">
           <caret line="199" column="11" selection-start-line="199" selection-start-column="11" selection-end-line="199" selection-end-column="11" />
           <folding />
         </state>
@@ -784,7 +644,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/login/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.678571">
+        <state vertical-scroll-proportion="0.0">
           <caret line="94" column="12" selection-start-line="94" selection-start-column="47" selection-end-line="94" selection-end-column="53" />
           <folding />
         </state>
@@ -792,7 +652,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layout/left.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="165" column="15" selection-start-line="165" selection-start-column="15" selection-end-line="165" selection-end-column="15" />
           <folding />
         </state>
@@ -800,15 +660,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/manage/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.7142856">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.178572">
+        <state vertical-scroll-proportion="0.0">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="e#40#66#0#PHP" expanded="true" />
@@ -818,7 +678,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/Manage/ManageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58117646">
+        <state vertical-scroll-proportion="-0.40235293">
           <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
           <folding>
             <element signature="e#53#79#0#PHP" expanded="true" />

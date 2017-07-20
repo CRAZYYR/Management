@@ -19,4 +19,6 @@ Route::get('test', function(){
 	return view('temp.index');
 });
 Route::resource('manage', 'Admin\Manage\ManageController');
+Route::resource('waiter', 'Admin\Manage\WaiterController');
+
 

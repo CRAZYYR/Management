@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2017-07-19 16:09:40
+Date: 2017-07-20 11:56:07
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -45,6 +45,7 @@ CREATE TABLE `mg_goods` (
   `gnumber` int(11) NOT NULL DEFAULT '0' COMMENT '商品的总数',
   `gpri` varchar(255) NOT NULL DEFAULT '0' COMMENT '商品的价格',
   `lid` int(11) NOT NULL DEFAULT '0' COMMENT '这个和gid对等',
+  `gweight` varchar(255) NOT NULL DEFAULT '' COMMENT '商品的重量',
   PRIMARY KEY (`gid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='商品的列表';
 
@@ -81,11 +82,12 @@ CREATE TABLE `mg_server` (
   `sname` varchar(255) NOT NULL DEFAULT '' COMMENT '服务名称',
   `sdescribe` varchar(255) NOT NULL DEFAULT '' COMMENT '服务的说明',
   PRIMARY KEY (`sid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='这个是其他服务的表';
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='这个是其他服务的表';
 
 -- ----------------------------
 -- Records of mg_server
 -- ----------------------------
+INSERT INTO `mg_server` VALUES ('1', 'title', '六喜珠宝');
 
 -- ----------------------------
 -- Table structure for mg_user
@@ -106,4 +108,4 @@ CREATE TABLE `mg_user` (
 -- ----------------------------
 -- Records of mg_user
 -- ----------------------------
-INSERT INTO `mg_user` VALUES ('1', 'admin', 'admin', 'c3284d0f94606de1fd2af172aba15bf3', '127.0.0.1', '0', '0', '1500451119');
+INSERT INTO `mg_user` VALUES ('1', 'admin', '张帅', 'c3284d0f94606de1fd2af172aba15bf3', '127.0.0.1', '1', '0', '1500520852');

@@ -51,6 +51,9 @@ class LoginController extends Controller
                if ($user->upw) {
                    $pw=$this->encrpt(trim($input['upw']));
                  if ($pw==$user->upw) {
+                             // 判断用户是否锁定
+                if($user->ulock){ return back()->with('msg','该帐号已被锁定!');};
+
                     $array=array(
                         'uid'=>$user->uid,
                         'uname'=>$user->uname,
@@ -63,8 +66,9 @@ class LoginController extends Controller
                         );
                      // 更新用户的登陆时间和IP地址
                      User::where(array('uid'=>$user->uid))->update($up);
-                   
-                   return redirect('manage');
+                     // 判断是否为超级用户
+                   if($user->uspu){return redirect('manage');}
+                   return redirect('waiter');
 
                  }else{
                      return back()->with('msg','你输入的密码错误!');
