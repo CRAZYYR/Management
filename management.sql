@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2017-07-20 11:56:07
+Date: 2017-07-20 15:45:12
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -28,30 +28,44 @@ CREATE TABLE `mg_customer` (
   `cvip` char(1) NOT NULL DEFAULT '0' COMMENT '客户是否为会员',
   `cpoint` int(11) NOT NULL DEFAULT '0' COMMENT '客户的积分',
   PRIMARY KEY (`cid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='这个是顾客表';
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='这个是顾客表';
 
 -- ----------------------------
 -- Records of mg_customer
 -- ----------------------------
+INSERT INTO `mg_customer` VALUES ('1', 'zs', '1643845728', '陕西省', '82374827193', '1', '20');
 
 -- ----------------------------
 -- Table structure for mg_goods
 -- ----------------------------
 DROP TABLE IF EXISTS `mg_goods`;
 CREATE TABLE `mg_goods` (
-  `gid` int(11) NOT NULL,
+  `gid` int(11) NOT NULL AUTO_INCREMENT,
   `gname` varchar(255) NOT NULL DEFAULT '' COMMENT '商品的名称',
   `gdescribe` varchar(255) NOT NULL DEFAULT '' COMMENT '商品的描述',
   `gnumber` int(11) NOT NULL DEFAULT '0' COMMENT '商品的总数',
   `gpri` varchar(255) NOT NULL DEFAULT '0' COMMENT '商品的价格',
   `lid` int(11) NOT NULL DEFAULT '0' COMMENT '这个和gid对等',
   `gweight` varchar(255) NOT NULL DEFAULT '' COMMENT '商品的重量',
+  `gsale` int(11) NOT NULL DEFAULT '0' COMMENT '剩余的商品',
+  `gmoney` int(255) NOT NULL DEFAULT '0' COMMENT '商品收入',
+  `gtime` int(11) NOT NULL DEFAULT '0' COMMENT '进货时间',
   PRIMARY KEY (`gid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='商品的列表';
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='商品的列表';
 
 -- ----------------------------
 -- Records of mg_goods
 -- ----------------------------
+INSERT INTO `mg_goods` VALUES ('1', '铂金', '这个是铂金', '5', '5', '0', '5', '4', '2', '1500533201');
+INSERT INTO `mg_goods` VALUES ('2', '银子', '这个是银子', '6', '4', '0', '5', '3', '3', '1500533201');
+INSERT INTO `mg_goods` VALUES ('3', '例子', '这个是例子', '80', '6', '0', '6', '40', '44', '1500533201');
+INSERT INTO `mg_goods` VALUES ('4', '哈哈', '哈哈', '8', '6', '0', '7', '6', '31', '1500533201');
+INSERT INTO `mg_goods` VALUES ('5', 'xixi', 'hah', '0', '0', '1', '', '0', '0', '1500533201');
+INSERT INTO `mg_goods` VALUES ('6', 'wuwu', 'enen', '0', '0', '2', '', '0', '2', '1500533201');
+INSERT INTO `mg_goods` VALUES ('7', 'zs', 'sa', '0', '0', '3', '', '0', '0', '1500533201');
+INSERT INTO `mg_goods` VALUES ('8', 'saas', 'wqs', '0', '0', '4', '', '0', '4', '1500533201');
+INSERT INTO `mg_goods` VALUES ('9', 'dada', 'hjhj', '2', '5', '3', '', '1', '45', '1500533201');
+INSERT INTO `mg_goods` VALUES ('10', 'rtyu', 'rtyfgh', '0', '0', '2', '', '0', '0', '1500533201');
 
 -- ----------------------------
 -- Table structure for mg_sales
@@ -64,8 +78,12 @@ CREATE TABLE `mg_sales` (
   `stime` varchar(255) NOT NULL DEFAULT '' COMMENT '商品的创单时间',
   `snumber` int(11) NOT NULL DEFAULT '0' COMMENT '商品的个数',
   `sdescribe` varchar(255) NOT NULL DEFAULT '' COMMENT '销售商品的附加信息',
+  `sweight` varchar(255) NOT NULL DEFAULT '' COMMENT '卖出去商品的重量',
+  `smonth` int(11) NOT NULL DEFAULT '0' COMMENT '每月销售总量',
+  `stotle` int(11) NOT NULL DEFAULT '0' COMMENT '总共销售量',
   `uname` varchar(255) NOT NULL DEFAULT '' COMMENT '商品的销售人',
   `cname` varchar(255) NOT NULL DEFAULT '' COMMENT '顾客的姓名',
+  `gid` int(255) NOT NULL DEFAULT '0' COMMENT '销售的商品号',
   PRIMARY KEY (`sid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='商品的信息表';
 
@@ -102,10 +120,12 @@ CREATE TABLE `mg_user` (
   `uspu` char(1) NOT NULL DEFAULT '0' COMMENT '是否为超级管理员',
   `ulock` char(1) NOT NULL DEFAULT '0' COMMENT '0代表正常,1代表锁',
   `utime` int(11) NOT NULL DEFAULT '0' COMMENT '最后一次登陆时间',
+  `utotle` int(11) NOT NULL DEFAULT '0' COMMENT '销售总量',
   PRIMARY KEY (`uid`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='这个是用户登录帐号表';
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='这个是用户登录帐号表';
 
 -- ----------------------------
 -- Records of mg_user
 -- ----------------------------
-INSERT INTO `mg_user` VALUES ('1', 'admin', '张帅', 'c3284d0f94606de1fd2af172aba15bf3', '127.0.0.1', '1', '0', '1500520852');
+INSERT INTO `mg_user` VALUES ('1', 'admin', '张帅', 'c3284d0f94606de1fd2af172aba15bf3', '127.0.0.1', '1', '0', '1500528496', '3');
+INSERT INTO `mg_user` VALUES ('2', 'zscool', 'shuaizi', 'c3284d0f94606de1fd2af172aba15bf3', '', '0', '0', '0', '4');
