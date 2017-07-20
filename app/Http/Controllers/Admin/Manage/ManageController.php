@@ -21,7 +21,7 @@ class ManageController extends Controller
         if(!session('uinfo')){
             return redirect('login');
         }
-      
+     
         return view('admin.manage.index');
     }
 

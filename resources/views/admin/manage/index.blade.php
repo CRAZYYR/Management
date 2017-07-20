@@ -23,247 +23,120 @@
         <div id="page-stats" class="panel-collapse panel-body collapse in">
 
                     <div class="row">
+                        @foreach($ghot as $ghot)
                         <div class="col-md-3 col-sm-6">
                             <div class="knob-container">
-                                <input class="knob" data-width="200" data-min="0" data-max="3000" data-displayPrevious="true" value="2500" data-fgColor="#92A3C2" data-readOnly=true; title="haha">
-                                <h3 class="text-muted text-center">Accounts</h3>
+                                <input class="knob" data-width="200" data-min="0" data-max="{{$ghot->gnumber}}" data-displayPrevious="true" value="{{$ghot->gsale}}" data-fgColor="#92A3C2" data-readOnly=true; title="剩余数量：{{($ghot->gnumber)-($ghot->gsale)}}">
+                                <h3 class="text-muted text-center">{{$ghot->gname}}</h3>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="knob-container">
-                                <input class="knob" data-width="200" data-min="0" data-max="4500" data-displayPrevious="true" value="3299" data-fgColor="#92A3C2" data-readOnly=true;>
-                                <h3 class="text-muted text-center">Subscribers</h3>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="knob-container">
-                                <input class="knob" data-width="200" data-min="0" data-max="2700" data-displayPrevious="true" value="1840" data-fgColor="#92A3C2" data-readOnly=true;>
-                                <h3 class="text-muted text-center">Pending</h3>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="knob-container">
-                                <input class="knob" data-width="200" data-min="0" data-max="15000" data-displayPrevious="true" value="10067" data-fgColor="#92A3C2" data-readOnly=true;>
-                                <h3 class="text-muted text-center">Completed</h3>
-                            </div>
-                        </div>
+                      @endforeach
+                    
                     </div>
         </div>
     </div>
 <!-- 销售排行前6的商品 -->
 <div class="row">
-<div class="col-sm-6 col-md-6">
+<div class="col-sm-12 col-md-12">
         <div class="panel panel-default"> 
             <div class="panel-heading no-collapse">
                 <span class="panel-icon pull-right">
-                    <a href="#" class="demo-cancel-click" rel="tooltip" title="Click to refresh"><i class="fa fa-refresh"></i></a>
+                    <a href="#" class="demo-cancel-click" rel="tooltip" title="点击刷新"><i class="fa fa-refresh"></i></a>
                 </span>
-
                推销排行前六商品
             </div>
             <table class="table list">
               <tbody>
+              @foreach($ghotch as $ghotch)
                   <tr>
                       <td>
-                          <a href="#"><p class="title">Care Hospital</p></a>
-                          <p class="info">Sales Rating: 86%</p>
+                          <a href="#"><p class="title">{{$ghotch->gname}}</p></a>
+                          <p class="info">总量:{{$ghotch->gnumber}}件</p>
                       </td>
                       <td>
-                          <p>Date: 7/19/2012</p>
-                          <a href="#">View Transaction</a>
+                          <p>商品单价(g)</p>
+                          <a href="#">${{$ghotch->gpri}}</a>
+                      </td>
+                           <td>
+                          <p>商品重(g)</p>
+                          <a href="#">{{$ghotch->gweight}}</a>
+                      </td>
+                          <td>
+                          <p>销售量</p>
+                          <a href="#">{{$ghotch->gsale}}件</a>
                       </td>
                       <td>
-                          <p class="text-danger h3 pull-right" style="margin-top: 12px;">$20,500</p>
+                          <p class="text-danger h3 pull-right" style="margin-top: 12px;">${{$ghotch->gmoney}}</p>
                       </td>
                   </tr>
-                  <tr>
-                      <td>
-                          <a href="#"><p class="title">Custom Eyesight</p></a>
-                          <p class="info">Sales Rating: 58%</p>
-                      </td>
-                      <td>
-                          <p>Date: 7/19/2012</p>
-                          <a href="#">View Transaction</a>
-                      </td>
-                      <td>
-                          <p class="text-danger h3 pull-right" style="margin-top: 12px;">$12,600</p>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          <a href="#"><p class="title">Clear Dental</p></a>
-                          <p class="info">Sales Rating: 76%</p>
-                      </td>
-                      <td>
-                          <p>Date: 7/19/2012</p>
-                          <a href="#">View Transaction</a>
-                      </td>
-                      <td>
-                          <p class="text-danger h3 pull-right" style="margin-top: 12px;">$2,500</p>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          <a href="#"><p class="title">Safe Insurance</p></a>
-                          <p class="info">Sales Rating: 82%</p>
-                      </td>
-                      <td>
-                          <p>Date: 7/19/2012</p>
-                          <a href="#">View Transaction</a>
-                      </td>
-                      <td>
-                          <p class="text-danger h3 pull-right" style="margin-top: 12px;">$22,400</p>
-                      </td>
-                  </tr>
-                    
+                 
+                    @endforeach
               </tbody>
             </table>
         </div>
     </div>
-    <div class="col-sm-6 col-md-6">
-
-
-        <div class="panel panel-default">
-            <div class="panel-heading no-collapse">服务员对商品的销售量</div>
-            <table class="table table-bordered table-striped">
-              <thead>
-                <tr>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Username</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Mark</td>
-                  <td>Tompson</td>
-                  <td>the_mark7</td>
-                </tr>
-                <tr>
-                  <td>Ashley</td>
-                  <td>Jacobs</td>
-                  <td>ash11927</td>
-                </tr>
-                <tr>
-                  <td>Audrey</td>
-                  <td>Ann</td>
-                  <td>audann84</td>
-                </tr>
-                <tr>
-                  <td>John</td>
-                  <td>Robinson</td>
-                  <td>jr5527</td>
-                </tr>
-                <tr>
-                  <td>Aaron</td>
-                  <td>Butler</td>
-                  <td>aaron_butler</td>
-                </tr>
-                <tr>
-                  <td>Chris</td>
-                  <td>Albert</td>
-                  <td>cab79</td>
-                </tr>
-              </tbody>
-            </table>
-        </div>
-    </div>
+    
 
 </div>
-
 <div class="row">
-     <div class="col-sm-6 col-md-6">
 
-    
+<div class="col-sm-12 col-md-12">
+
+
         <div class="panel panel-default">
-            <div class="panel-heading no-collapse">本店近六个月收入</div>
+            <div class="panel-heading no-collapse">服务员前六销量</div>
             <table class="table table-bordered table-striped">
               <thead>
                 <tr>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Username</th>
+                  <th>帐号</th>
+                  <th>姓名</th>
+                  <th>销售量(件)</th>
                 </tr>
               </thead>
               <tbody>
+              @foreach($waiter as $waiter)
                 <tr>
-                  <td>Mark</td>
-                  <td>Tompson</td>
-                  <td>the_mark7</td>
+                  <td>{{$waiter->uaccount}}</td>
+                  <td>{{$waiter->uname}}</td>
+                  <td>{{$waiter->utotle}}</td>
                 </tr>
-                <tr>
-                  <td>Ashley</td>
-                  <td>Jacobs</td>
-                  <td>ash11927</td>
-                </tr>
-                <tr>
-                  <td>Audrey</td>
-                  <td>Ann</td>
-                  <td>audann84</td>
-                </tr>
-                <tr>
-                  <td>John</td>
-                  <td>Robinson</td>
-                  <td>jr5527</td>
-                </tr>
-                <tr>
-                  <td>Aaron</td>
-                  <td>Butler</td>
-                  <td>aaron_butler</td>
-                </tr>
-                <tr>
-                  <td>Chris</td>
-                  <td>Albert</td>
-                  <td>cab79</td>
-                </tr>
+               @endforeach
               </tbody>
             </table>
         </div>
     </div>
-     <div class="col-sm-6 col-md-6">
 
+
+</div>
+<div class="row">
+     <div class="col-sm-12 col-md-12">
     
+
         <div class="panel panel-default">
-            <div class="panel-heading no-collapse">本店近六个月收入</div>
+            <div class="panel-heading no-collapse">本店销售金额</div>
             <table class="table table-bordered table-striped">
               <thead>
                 <tr>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Username</th>
+                  <th>名称</th>
+                  <th>销售(g)</th>
+                   <th>收入</th>
                 </tr>
               </thead>
               <tbody>
+              <?php $moneyt=0; ?>
+              @foreach($goods as $goods)
                 <tr>
-                  <td>Mark</td>
-                  <td>Tompson</td>
-                  <td>the_mark7</td>
+                  <td>{{$goods->gname}}</td>
+                  <td>{{$goods->gweight}}</td>
+                  <td>${{$goods->gmoney}}</td>
                 </tr>
+                <?php $moneyt+=$goods->gmoney ;?>
+              @endforeach
                 <tr>
-                  <td>Ashley</td>
-                  <td>Jacobs</td>
-                  <td>ash11927</td>
+                  <th>总收入</th>
+                  <th colspan="2">${{$moneyt}}</th>
                 </tr>
-                <tr>
-                  <td>Audrey</td>
-                  <td>Ann</td>
-                  <td>audann84</td>
-                </tr>
-                <tr>
-                  <td>John</td>
-                  <td>Robinson</td>
-                  <td>jr5527</td>
-                </tr>
-                <tr>
-                  <td>Aaron</td>
-                  <td>Butler</td>
-                  <td>aaron_butler</td>
-                </tr>
-                <tr>
-                  <td>Chris</td>
-                  <td>Albert</td>
-                  <td>cab79</td>
-                </tr>
+
               </tbody>
             </table>
         </div>
