@@ -1,16 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Manage;
+namespace App\Http\Controllers\Admin\Customer;
 
-use App\Http\Model\Month;
-use App\Http\Model\Sales;
-use App\http\Model\Server;
+use App\Http\Model\Customer;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Input;
 
-class ManageController extends Controller
+class CustomerVipController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,16 +18,12 @@ class ManageController extends Controller
      */
     public function index()
     {
-        // 判断用户是否处于登录状态
+                  // 判断用户是否处于登录状态
         if(!session('uinfo')){
             return redirect('login');
         }
-        // 多表联合查询，进行数据的统计
-        // 返回上一个月的销售记录
-        $month=Month::where(array('month.mtime'=>date('Ym',time())-1))->join('goods', 'goods.gid', '=', 'month.gid')->orderBy('month.mtotle','desc')->get();
-    
-
-        return view('admin.manage.index',compact('month'));
+        $customers=Customer::where(array('cvip'=>1))->orderBy('cpoint','desc')->paginate(20);
+         return view('admin.manage.usersVIP',compact('customers'));
     }
 
     /**
@@ -60,7 +55,14 @@ class ManageController extends Controller
      */
     public function show($id)
     {
-        //
+        
+    // 判断用户是否处于登录状态
+        if(!session('uinfo')){
+            return redirect('login');
+        }
+        $rs=Customer::where(array('cid'=>$id))->first();
+       
+       return view('admin.manage.uservip',compact('rs'));
     }
 
     /**
@@ -83,7 +85,18 @@ class ManageController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+                  // 判断用户是否处于登录状态
+        if(!session('uinfo')){
+            return redirect('login');
+        }
+       $input=Input::except('_token','_method');
+       $rs=Customer::where(array('cid'=>$id))->update($input);
+       if ($rs) {
+           return redirect('customervip');
+       }
+       
+       
+        return redirect('customervip');
     }
 
     /**

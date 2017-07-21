@@ -37,7 +37,7 @@
     </div>
 <!-- 销售排行前6的商品 -->
 <div class="row">
-<div class="col-sm-12 col-md-12">
+<div class="col-sm-6 col-md-12">
         <div class="panel panel-default"> 
             <div class="panel-heading no-collapse">
                 <span class="panel-icon pull-right">
@@ -80,7 +80,7 @@
 </div>
 <div class="row">
 
-<div class="col-sm-12 col-md-12">
+<div class="col-sm-6 col-md-12">
 
 
         <div class="panel panel-default">
@@ -109,11 +109,11 @@
 
 </div>
 <div class="row">
-     <div class="col-sm-12 col-md-12">
+     <div class="col-sm-6 col-md-12">
     
 
         <div class="panel panel-default">
-            <div class="panel-heading no-collapse">本店销售金额</div>
+            <div class="panel-heading no-collapse">上一月的销售情况</div>
             <table class="table table-bordered table-striped">
               <thead>
                 <tr>
@@ -124,13 +124,13 @@
               </thead>
               <tbody>
               <?php $moneyt=0; ?>
-              @foreach($goods as $goods)
+              @foreach($month as $month)
                 <tr>
-                  <td>{{$goods->gname}}</td>
-                  <td>{{$goods->gweight}}</td>
-                  <td>${{$goods->gmoney}}</td>
+                  <td>{{$month->gname}}</td>
+                  <td>{{$month->mtotle}}</td>
+                  <td>${{$month->mmoney}}</td>
                 </tr>
-                <?php $moneyt+=$goods->gmoney ;?>
+                <?php $moneyt+=$month->mmoney ;?>
               @endforeach
                 <tr>
                   <th>总收入</th>

@@ -9,9 +9,11 @@
 
     <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>-->
     <link rel="stylesheet" type="text/css" href="{{asset('public/lib/bootstrap/css/bootstrap.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('public/layer/mobile/need/layer.css')}}">
     <link rel="stylesheet" href="{{asset('public/lib/font-awesome/css/font-awesome.css')}}">
 
     <script src="{{asset('public/lib/jquery-1.11.1.min.js')}}" type="text/javascript"></script>
+ <script src="{{asset('public/layer/layer.js')}}" type="text/javascript"></script>
 
         <script src="{{asset('public/lib/jQuery-Knob/js/jquery.knob.js')}}" type="text/javascript"></script>
     <script type="text/javascript">
@@ -23,7 +25,13 @@
 
     <link rel="stylesheet" type="text/css" href="{{asset('public/stylesheets/theme.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('public/stylesheets/premium.css')}}">
+    
 
+    <link href="{{asset('public/switch/css/inserthtml.com.radios.css')}}" rel="stylesheet" type="text/css"/>
+
+
+
+ 
 </head>
 <body class=" theme-blue">
 
@@ -121,17 +129,17 @@
     <li><a href="#" data-target=".dashboard-menu" class="nav-header" data-toggle="collapse"><i class="fa fa-fw fa-dashboard"></i> 本店基本信息<i class="fa fa-collapse"></i></a></li>
     <li><ul class="dashboard-menu nav nav-list collapse in">
             <li><a href="{{url('manage')}}"><span class="fa fa-caret-right"></span>销售基本信息</a></li>
-            <li ><a href="users.html"><span class="fa fa-caret-right"></span> 普通顾客信息</a></li>
-            <li ><a href="user.html"><span class="fa fa-caret-right"></span>VIP顾客信息</a></li>
-           
+            <li ><a href="{{url('customer')}}"><span class="fa fa-caret-right"></span> 普通顾客信息</a></li>
+            <li ><a href="{{url('customervip')}}"><span class="fa fa-caret-right"></span>VIP顾客信息</a></li>
+          
     </ul></li>
 
     <li data-popover="true" data-content="Items in this group require a <strong><a href='#' target='blank'>premium license</a><strong>." rel="popover" data-placement="right"><a href="#" data-target=".premium-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-fighter-jet"></i> 账户管理<i class="fa fa-collapse"></i></a></li>
         <li><ul class="premium-menu nav nav-list collapse">
-             
-            <li ><a href="premium-profile.html"><span class="fa fa-caret-right"></span> 店员帐号管理</a></li>
+         
+            <li ><a href="{{url('wuser')}}"><span class="fa fa-caret-right"></span> 店员帐号管理</a></li>
            
-            <li ><a href="premium-blog-item.html"><span class="fa fa-caret-right"></span> 顾客VIP管理</a></li>
+     
             <li ><a href="premium-pricing-tables.html"><span class="fa fa-caret-right"></span> 超级用户管理</a></li>
         
     </ul></li>
@@ -152,7 +160,7 @@
              <li ><a href="terms-and-conditions.html"><span class="fa fa-caret-right"></span> 商品剩余总表</a></li>
     </ul></li>
 
-        <li><a href="help.html" class="nav-header"><i class="fa fa-fw fa-question-circle"></i> Help</a></li>
+        <li><a href="help.html" class="nav-header"><i class="fa fa-fw fa-question-circle"></i> 帮助</a></li>
             
             </ul>
     </div>
