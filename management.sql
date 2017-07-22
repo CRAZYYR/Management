@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2017-07-20 15:45:12
+Date: 2017-07-22 14:18:30
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -28,12 +28,12 @@ CREATE TABLE `mg_customer` (
   `cvip` char(1) NOT NULL DEFAULT '0' COMMENT '客户是否为会员',
   `cpoint` int(11) NOT NULL DEFAULT '0' COMMENT '客户的积分',
   PRIMARY KEY (`cid`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='这个是顾客表';
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='这个是顾客表';
 
 -- ----------------------------
 -- Records of mg_customer
 -- ----------------------------
-INSERT INTO `mg_customer` VALUES ('1', 'zs', '1643845728', '陕西省', '82374827193', '1', '20');
+INSERT INTO `mg_customer` VALUES ('1', 'zs', '234554', '43543545', '54545345', '1', '450');
 
 -- ----------------------------
 -- Table structure for mg_goods
@@ -68,6 +68,25 @@ INSERT INTO `mg_goods` VALUES ('9', 'dada', 'hjhj', '2', '5', '3', '', '1', '45'
 INSERT INTO `mg_goods` VALUES ('10', 'rtyu', 'rtyfgh', '0', '0', '2', '', '0', '0', '1500533201');
 
 -- ----------------------------
+-- Table structure for mg_month
+-- ----------------------------
+DROP TABLE IF EXISTS `mg_month`;
+CREATE TABLE `mg_month` (
+  `mid` int(11) NOT NULL AUTO_INCREMENT COMMENT '月份',
+  `mtime` varchar(255) NOT NULL DEFAULT '' COMMENT '时间',
+  `mtotle` int(11) NOT NULL DEFAULT '0' COMMENT '总和',
+  `gid` int(11) NOT NULL COMMENT '商品的标识',
+  `mmoney` int(11) NOT NULL DEFAULT '0' COMMENT '月输入',
+  PRIMARY KEY (`mid`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of mg_month
+-- ----------------------------
+INSERT INTO `mg_month` VALUES ('1', '201706', '32', '1', '21');
+INSERT INTO `mg_month` VALUES ('2', '201706', '44', '2', '11');
+
+-- ----------------------------
 -- Table structure for mg_sales
 -- ----------------------------
 DROP TABLE IF EXISTS `mg_sales`;
@@ -79,17 +98,20 @@ CREATE TABLE `mg_sales` (
   `snumber` int(11) NOT NULL DEFAULT '0' COMMENT '商品的个数',
   `sdescribe` varchar(255) NOT NULL DEFAULT '' COMMENT '销售商品的附加信息',
   `sweight` varchar(255) NOT NULL DEFAULT '' COMMENT '卖出去商品的重量',
-  `smonth` int(11) NOT NULL DEFAULT '0' COMMENT '每月销售总量',
-  `stotle` int(11) NOT NULL DEFAULT '0' COMMENT '总共销售量',
+  `smonth` varchar(255) NOT NULL DEFAULT '' COMMENT '在某年某月销售',
   `uname` varchar(255) NOT NULL DEFAULT '' COMMENT '商品的销售人',
   `cname` varchar(255) NOT NULL DEFAULT '' COMMENT '顾客的姓名',
   `gid` int(255) NOT NULL DEFAULT '0' COMMENT '销售的商品号',
+  `glid` int(11) NOT NULL DEFAULT '0' COMMENT '一级目录',
   PRIMARY KEY (`sid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='商品的信息表';
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='商品的信息表';
 
 -- ----------------------------
 -- Records of mg_sales
 -- ----------------------------
+INSERT INTO `mg_sales` VALUES ('1', 'xixi', '23', '', '1', '', '23', '201706', '张帅', '帅字', '5', '1');
+INSERT INTO `mg_sales` VALUES ('2', 'zs', '026', '', '2', '', '21', '201706', '帅字', '张帅', '6', '2');
+INSERT INTO `mg_sales` VALUES ('3', 'rtyu', '22', '', '2', '', '33', '201706', 'shuai', 'sasasa', '10', '2');
 
 -- ----------------------------
 -- Table structure for mg_server
@@ -127,5 +149,5 @@ CREATE TABLE `mg_user` (
 -- ----------------------------
 -- Records of mg_user
 -- ----------------------------
-INSERT INTO `mg_user` VALUES ('1', 'admin', '张帅', 'c3284d0f94606de1fd2af172aba15bf3', '127.0.0.1', '1', '0', '1500528496', '3');
-INSERT INTO `mg_user` VALUES ('2', 'zscool', 'shuaizi', 'c3284d0f94606de1fd2af172aba15bf3', '', '0', '0', '0', '4');
+INSERT INTO `mg_user` VALUES ('1', 'admin', '张帅', 'c3284d0f94606de1fd2af172aba15bf3', '127.0.0.1', '0', '0', '1500693306', '3');
+INSERT INTO `mg_user` VALUES ('2', 'zscool', 'shuaizi', 'c3284d0f94606de1fd2af172aba15bf3', '', '0', '1', '0', '4');
