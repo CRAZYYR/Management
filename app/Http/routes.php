@@ -27,7 +27,23 @@ Route::resource('waiter', 'Admin\Manage\WaiterController');
 Route::resource('customer', 'Admin\Customer\CustomerController');
 
 Route::resource('customervip', 'Admin\Customer\CustomerVipController');
-
+//普通店员信息管理
 Route::post('wuser/ulock', 'Admin\User\UserController@ulock');
 Route::post('wuser/uspu', 'Admin\User\UserController@uspu');
 Route::resource('wuser', 'Admin\User\UserController');
+// 超级管理员
+Route::post('suser/ulock', 'Admin\User\SuserController@ulock');
+Route::post('suser/uspu', 'Admin\User\SuserController@uspu');
+Route::resource('suser', 'Admin\User\SuserController');
+// 帮助页面
+Route::get('help', function(){
+	return view('admin.help.help');
+});
+
+// 商品的添加GoodsController
+ Route::resource('goods', 'Admin\Goods\GoodsController');
+ Route::post('add', 'Admin\Goods\GoodsController@addgoods');
+ // 商品的销售账单SaleController
+  Route::resource('sale', 'Admin\Goods\SaleController');
+ 
+  Route::post('getMonthData', 'Admin\Goods\SaleController@getMonthData');

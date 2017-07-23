@@ -3,29 +3,28 @@
 namespace App\Http\Controllers\Admin\User;
 
 use App\http\Model\User;
-use App\Http\Model\Usermonth;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
 
-class UserController extends Controller
+class SuserController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
+     *suser
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-                   // 判断用户是否处于登录状态
+                        // 判断用户是否处于登录状态
         if(!session('uinfo')){
             return redirect('login');
         }
-       
-        $wusers=User::where(array('uspu'=>0))->orderBy('utime','desc')->paginate(20);
-         return view('admin.user.wusers',compact('wusers'));
+    
+        $susers=User::where(array('uspu'=>1))->orderBy('utime','desc')->paginate(20);
+         return view('admin.suser.users',compact('susers'));
     }
 
     /**
@@ -35,12 +34,7 @@ class UserController extends Controller
      */
     public function create()
     {
-                  // 判断用户是否处于登录状态
-        if(!session('uinfo')){
-            return redirect('login');  
-        }
-             return view('admin.user.adduser');
-       
+        //
     }
 
     /**
@@ -51,32 +45,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-          // 判断用户是否处于登录状态
-        if(!session('uinfo')){
-            return redirect('login');
-        }
-        $input=Input::except('_token');
-        if (!$input['uname'] || !$input['upw'] || !$input['uaccount']) {
-             return back()->with('error','添加账户失败!');
-        }
-        
-        $input['uip']=$_SERVER["REMOTE_ADDR"];
-        $input['utime']=time();
-        $input['upw']=md5(md5($input['upw']));
-          $uid=User::insertGetId($input);
-          if ($uid) {
-
-            $array=array('uid'=>$uid,'uname'=>$input['uname'],'umtime'=>date('Ym',time()));
-               $rs=Usermonth::insert($array);
-               if ($rs) {
-                   return redirect('wuser');
-               }else{
-                return back()->with('error','添加账户失败!');
-               }
-          }
-          return back()->with('error','添加账户失败!');
-           
-          
+        //
     }
 
     /**
@@ -87,14 +56,14 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        // 判断用户是否处于登录状态
+               // 判断用户是否处于登录状态
         if(!session('uinfo')){
             return redirect('login');
         }
         $rs=User::where(array('uid'=>$id))->first();
        
-       return view('admin.user.wuser',compact('rs'));
-       
+       return view('admin.suser.user',compact('rs'));
+
     }
 
     /**
@@ -117,7 +86,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-                   // 判断用户是否处于登录状态
+                           // 判断用户是否处于登录状态
         if(!session('uinfo')){
             return redirect('login');
         }
@@ -126,22 +95,22 @@ class UserController extends Controller
 
        $rs=User::where(array('uid'=>$id))->update($input);
        if ($rs) {
-           return redirect('wuser');
+           return redirect('suser');
        }
        
        
-        return redirect('wuser');
+        return redirect('suser');
     }
 
     /**
      * Remove the specified resource from storage.
-     *异步进行数据的删除
+     *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-          // 判断用户是否处于登录状态
+                  // 判断用户是否处于登录状态
         if(!session('uinfo')){
             return redirect('login');
         }
@@ -152,16 +121,18 @@ class UserController extends Controller
        }else{
         return json_encode(array('state'=>0,'msg'=>'删除失败!'));
        }
+
+
     }
-     
-    /**
+        /**
      * 设置超级用户
      * [uspu description]
      * @return [type] [description]
      */
     public function uspu(){
+        
       $input= Input::except('_token');
-      $rs=User::where($input)->update(array('uspu'=>1));
+      $rs=User::where($input)->update(array('uspu'=>0));
        if ($rs) {
            return json_encode(array('state'=>1,'msg'=>'修改成功!'));
        }else{
@@ -176,7 +147,9 @@ class UserController extends Controller
 
         $input=Input::all();
         // 解锁枷锁判断
+      
         if ($input['js']) {
+            
               $input= Input::except('_token','js');
       $rs=User::where($input)->update(array('ulock'=>0));
        if ($rs) {

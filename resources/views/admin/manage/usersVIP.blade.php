@@ -5,9 +5,15 @@
         <div class="header">
             
             <h1 class="page-title">VIP顾客信息</h1>
-   
 
         </div>
+
+   
+<div class="btn-toolbar list-toolbar">
+     <a class="btn btn-primary" href="{{url('customervip/create')}}"><i class="fa fa-plus"></i>添加VIP会员</a>
+
+</div>
+
         <div class="main-content">
             
 

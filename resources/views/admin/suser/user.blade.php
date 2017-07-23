@@ -3,7 +3,7 @@
     <div class="content">
         <div class="header">
             
-            <h1 class="page-title">店员帐号修改</h1>
+            <h1 class="page-title">超级管理修改</h1>
      
 
         </div>
@@ -15,7 +15,7 @@
     <br>
     <div id="myTabContent" class="tab-content">
       <div class="tab-pane active in" id="home">
-      <form id="tab" method="post"  action="{{asset('wuser').'/'.$rs->uid}}">
+      <form id="tab" method="post"  action="{{asset('suser').'/'.$rs->uid}}">
           {{method_field("PUT")}}
            {{csrf_field()}}
          
@@ -29,7 +29,7 @@
         </div>
         <div class="form-group">
         <label>设置新密码</label>
-        <input name="upw" type="text" placeholder="请输入新密码!" class="form-control">
+        <input name="upw" type="text" placeholder="请输入新密码!"  class="form-control">
         </div>
     
    

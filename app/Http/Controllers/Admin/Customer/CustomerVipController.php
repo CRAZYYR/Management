@@ -33,7 +33,12 @@ class CustomerVipController extends Controller
      */
     public function create()
     {
-        //
+                      // 判断用户是否处于登录状态
+        if(!session('uinfo')){
+            return redirect('login');  
+        }
+             return view('admin.manage.adduservip');
+       
     }
 
     /**
@@ -44,7 +49,25 @@ class CustomerVipController extends Controller
      */
     public function store(Request $request)
     {
-        //
+            // 判断用户是否处于登录状态
+        if(!session('uinfo')){
+            return redirect('login');
+        }
+        $input=Input::except('_token');
+        if (!$input['cname'] || !$input['ccard'] || !$input['cphone'] ||!$input['caddress']) {
+             return back()->with('error','添加VIP账户失败!');
+        }
+       $input['cvip']=1;
+          $uid=Customer::insert($input);
+          if ($uid) {
+
+        
+             return redirect('customervip');
+              
+          }
+          return back()->with('error','添加vip账户失败!');
+
+
     }
 
     /**

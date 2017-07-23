@@ -4,7 +4,7 @@
     <div class="content">
         <div class="header">
             
-            <h1 class="page-title">普通店员信息</h1>
+            <h1 class="page-title">超级管理员信息</h1>
    
 <div class="btn-toolbar list-toolbar">
  <!--    <a class="btn btn-primary" href="{{url('wuser/create')}}"><i class="fa fa-plus"></i>添加店员</a>
@@ -21,7 +21,7 @@
 
 
         <div class="panel panel-default">
-            <div class="panel-heading no-collapse"><center>服务员信息</center></div>
+            <div class="panel-heading no-collapse"><center>超级管理员</center></div>
             <table class="table table-bordered table-striped">
               <thead>
     <tr>
@@ -34,27 +34,26 @@
     </tr>
               </thead>
               <tbody>
-@foreach($wusers as $wuser)
+@foreach($susers as $suser)
     <tr>
-      <td>{{$wuser->uaccount}}</td>
-      <td>{{$wuser->uname}}</td>
-        <td>{{date('Y-m-d',$wuser->utime)}}</td>
+      <td>{{$suser->uaccount}}</td>
+      <td>{{$suser->uname}}</td>
+        <td>{{date('Y-m-d',$suser->utime)}}</td>
       <td>
 
 
-      <input class="uspu"   type="checkbox" value="{{$wuser->uid}}"  />
+      <input class="uspu"  checked="checked"  type="checkbox" value="{{$suser->uid}}"  />
      
         
       </td>
       <td>
-   
-              <input class="ulock"  type="checkbox"  value="{{$wuser->uid}}" />
+     <input class="ulock" name="ulock"  type="checkbox"  value="{{$suser->uid}}" />
            
 
       </td>
       <td>
-          <a href="{{url('wuser').'/'.$wuser->uid}}" class="update" ><i class="fa fa-pencil"></i></a>
-          <a href="#" role="button" data-toggle="modal" class="delete" value="{{$wuser->uid}}"><i class="fa fa-trash-o"></i></a>
+          <a href="{{url('suser').'/'.$suser->uid}}" class="update" ><i class="fa fa-pencil"></i></a>
+          <a href="#" role="button" data-toggle="modal" class="delete" value="{{$suser->uid}}"><i class="fa fa-trash-o"></i></a>
       </td>
     </tr>
  
@@ -76,10 +75,10 @@
 // 异步进行超级管理
 $('.uspu').click(function(){
 
-if ($("input[type='checkbox']").is(':checked')) {
+if (!$("input[type='checkbox']").is(':checked')) {
 var that =$(this).parent().parent();
 var uid=$(this).val();
-    $.post("{{url('wuser/uspu')}}",{'uid':uid,'_token':'{{csrf_token()}}'},function(data){
+    $.post("{{url('suser/uspu')}}",{'uid':uid,'_token':'{{csrf_token()}}'},function(data){
       if (data.state) {
        layer.msg(data.msg);  
         that.remove();
@@ -96,9 +95,9 @@ var uid=$(this).val();
 // 异步进行账号锁定
 $('.ulock').click(function(){
 var uid=$(this).val();
-if ($("input[type='checkbox']").is(':checked')) {
+if ($("input[name='ulock']").is(':checked')) {
 
-    $.post("{{url('wuser/ulock')}}",{'uid':uid,'js':0,'_token':'{{csrf_token()}}'},function(data){
+    $.post("{{url('suser/ulock')}}",{'uid':uid,'js':0,'_token':'{{csrf_token()}}'},function(data){
       if (data.state) {
        layer.msg(data.msg);  
        
@@ -111,7 +110,7 @@ if ($("input[type='checkbox']").is(':checked')) {
 }else{
 // 进行解锁
 
-    $.post("{{url('wuser/ulock')}}",{'uid':uid,'js':1,'_token':'{{csrf_token()}}'},function(data){
+    $.post("{{url('suser/ulock')}}",{'uid':uid,'js':1,'_token':'{{csrf_token()}}'},function(data){
       if (data.state) {
        layer.msg(data.msg);  
        
@@ -132,7 +131,7 @@ if ($("input[type='checkbox']").is(':checked')) {
 $('.delete').click(function(){
   var that=$(this).parent().parent();
     var uid=$(this).attr('value');
-    $.post("{{url('wuser')}}/"+uid,{'_method':'delete','_token':'{{csrf_token()}}'},function(data){
+    $.post("{{url('suser')}}/"+uid,{'_method':'delete','_token':'{{csrf_token()}}'},function(data){
       if (data.state) {
        layer.msg(data.msg);  
        that.remove();
@@ -150,7 +149,7 @@ $('.delete').click(function(){
 
 <ul class="pagination">
  
-  {!!$wusers->render()!!}
+  {!!$susers->render()!!}
   
 
 </ul>

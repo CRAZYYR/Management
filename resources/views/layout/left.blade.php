@@ -134,20 +134,21 @@
           
     </ul></li>
 
-    <li data-popover="true" data-content="Items in this group require a <strong><a href='#' target='blank'>premium license</a><strong>." rel="popover" data-placement="right"><a href="#" data-target=".premium-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-fighter-jet"></i> 账户管理<i class="fa fa-collapse"></i></a></li>
+    <li ><a href="#" data-target=".premium-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-fighter-jet"></i> 账户管理<i class="fa fa-collapse"></i></a></li>
         <li><ul class="premium-menu nav nav-list collapse">
-         
+         <li ><a href="{{url('wuser/create')}}"><span class="fa fa-caret-right"></span> 添加帐号管理</a></li>
             <li ><a href="{{url('wuser')}}"><span class="fa fa-caret-right"></span> 店员帐号管理</a></li>
            
      
-            <li ><a href="premium-pricing-tables.html"><span class="fa fa-caret-right"></span> 超级用户管理</a></li>
+            <li ><a href="{{url('suser')}}"><span class="fa fa-caret-right"></span> 超级用户管理</a></li>
         
     </ul></li>
 
         <li><a href="#" data-target=".accounts-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-briefcase"></i> 账单信息<i class="fa fa-collapse"></i> </a></li>
         <li><ul class="accounts-menu nav nav-list collapse">
-            <li ><a href="sign-in.html"><span class="fa fa-caret-right"></span> 进货账单</a></li>
-            <li ><a href="sign-up.html"><span class="fa fa-caret-right"></span> 销售账单</a></li>
+         <li ><a href="{{url('goods')}}"><span class="fa fa-caret-right"></span> 添加品牌</a></li>
+            <li ><a href="{{url('goods/create')}}"><span class="fa fa-caret-right"></span> 添加商品</a></li>
+            <li ><a href="{{url('sale')}}"><span class="fa fa-caret-right"></span> 销售账单</a></li>
             <li ><a href="sign-up.html"><span class="fa fa-caret-right"></span> 售后服务账单</a></li>
             <li ><a href="reset-password.html"><span class="fa fa-caret-right"></span> 利润信息账单</a></li>
     </ul></li>
@@ -160,7 +161,7 @@
              <li ><a href="terms-and-conditions.html"><span class="fa fa-caret-right"></span> 商品剩余总表</a></li>
     </ul></li>
 
-        <li><a href="help.html" class="nav-header"><i class="fa fa-fw fa-question-circle"></i> 帮助</a></li>
+        <li><a href="{{url('help')}}" class="nav-header"><i class="fa fa-fw fa-question-circle"></i> 帮助</a></li>
             
             </ul>
     </div>
