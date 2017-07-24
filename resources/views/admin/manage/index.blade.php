@@ -19,14 +19,14 @@
 <!-- 销量排行前四的商品总 -->
 
     <div class="panel panel-default">
-        <a href="#page-stats" class="panel-heading" data-toggle="collapse">销量排行前四的商品:</a>
+        <a href="#page-stats" class="panel-heading" data-toggle="collapse">上一月销量排行前四的品牌:</a>
         <div id="page-stats" class="panel-collapse panel-body collapse in">
 
                     <div class="row">
                         @foreach($ghot as $ghot)
                         <div class="col-md-3 col-sm-6">
                             <div class="knob-container">
-                                <input class="knob" data-width="200" data-min="0" data-max="{{$ghot->gnumber}}" data-displayPrevious="true" value="{{$ghot->gsale}}" data-fgColor="#92A3C2" data-readOnly=true; title="剩余数量：{{($ghot->gnumber)-($ghot->gsale)}}">
+                                <input class="knob" data-width="200" data-min="0" data-max="{{$gmontht}}" data-displayPrevious="true" value="{{$ghot->ptotle}}" data-fgColor="#92A3C2" data-readOnly=true; >
                                 <h3 class="text-muted text-center">{{$ghot->gname}}</h3>
                             </div>
                         </div>
@@ -36,7 +36,7 @@
         </div>
     </div>
 <!-- 销售排行前6的商品 -->
-<div class="row">
+<!-- <div class="row">
 <div class="col-sm-6 col-md-12">
         <div class="panel panel-default"> 
             <div class="panel-heading no-collapse">
@@ -77,14 +77,14 @@
     </div>
     
 
-</div>
+</div> -->
 <div class="row">
 
 <div class="col-sm-6 col-md-12">
 
 
         <div class="panel panel-default">
-            <div class="panel-heading no-collapse">服务员前六销量</div>
+            <div class="panel-heading no-collapse">上一月服务员销量</div>
             <table class="table table-bordered table-striped">
               <thead>
                 <tr>
@@ -98,7 +98,7 @@
                 <tr>
                   <td>{{$waiter->uaccount}}</td>
                   <td>{{$waiter->uname}}</td>
-                  <td>{{$waiter->utotle}}</td>
+                  <td>{{$waiter->umtotle}}</td>
                 </tr>
                @endforeach
               </tbody>
@@ -113,11 +113,11 @@
     
 
         <div class="panel panel-default">
-            <div class="panel-heading no-collapse">上一月的销售情况</div>
+            <div class="panel-heading no-collapse">商品 上一月的销售情况(前10)</div>
             <table class="table table-bordered table-striped">
               <thead>
                 <tr>
-                  <th>名称</th>
+                  <th>商品名称</th>
                   <th>销售(g)</th>
                    <th>收入</th>
                 </tr>

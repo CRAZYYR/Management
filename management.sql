@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2017-07-23 19:00:04
+Date: 2017-07-24 21:10:07
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -28,13 +28,18 @@ CREATE TABLE `mg_agoods` (
   `agtime` int(11) NOT NULL DEFAULT '0' COMMENT '进货时间',
   `agdata` varchar(255) NOT NULL COMMENT '进货日期',
   `aglid` int(11) NOT NULL DEFAULT '0' COMMENT '品牌ID',
+  `gid` int(11) NOT NULL,
+  `agweight` varchar(255) NOT NULL DEFAULT '' COMMENT '单重',
   PRIMARY KEY (`agid`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='进货清单';
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='进货清单';
 
 -- ----------------------------
 -- Records of mg_agoods
 -- ----------------------------
-INSERT INTO `mg_agoods` VALUES ('1', '43', '23', 'nihao', 'dsaa', '1500786034', '201707', '4');
+INSERT INTO `mg_agoods` VALUES ('1', '43', '23', 'nihao', 'dsaa', '1500786034', '201707', '4', '15', '');
+INSERT INTO `mg_agoods` VALUES ('2', '2', '120', '戒指', '这个是戒指', '1500881274', '201707', '1', '16', '6');
+INSERT INTO `mg_agoods` VALUES ('3', '20', '1200', '项链', '这个是项链', '1500882041', '201707', '1', '17', '10');
+INSERT INTO `mg_agoods` VALUES ('4', '23', '250', '手镯', '这个是手镯', '1500882280', '201706', '1', '18', '24');
 
 -- ----------------------------
 -- Table structure for mg_customer
@@ -74,7 +79,7 @@ CREATE TABLE `mg_goods` (
   `gmoney` int(255) NOT NULL DEFAULT '0' COMMENT '商品收入',
   `gtime` int(11) NOT NULL DEFAULT '0' COMMENT '进货时间',
   PRIMARY KEY (`gid`)
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COMMENT='商品的列表';
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COMMENT='商品的列表';
 
 -- ----------------------------
 -- Records of mg_goods
@@ -85,13 +90,14 @@ INSERT INTO `mg_goods` VALUES ('3', '例子', '这个是例子', '80', '6', '0',
 INSERT INTO `mg_goods` VALUES ('4', '哈哈', '哈哈', '8', '6', '0', '7', '6', '31', '1500533201');
 INSERT INTO `mg_goods` VALUES ('5', 'xixi', 'hah', '0', '0', '1', '', '0', '0', '1500533201');
 INSERT INTO `mg_goods` VALUES ('6', 'wuwu', 'enen', '0', '34', '2', '', '0', '2', '1500533201');
-INSERT INTO `mg_goods` VALUES ('7', 'zs', 'sa', '0', '0', '3', '', '0', '0', '1500533201');
+INSERT INTO `mg_goods` VALUES ('7', 'zs', 'sa', '0', '0', '4', '', '0', '0', '1500533201');
 INSERT INTO `mg_goods` VALUES ('8', 'saas', 'wqs', '0', '0', '4', '', '0', '4', '1500533201');
 INSERT INTO `mg_goods` VALUES ('9', 'dada', 'hjhj', '2', '5', '3', '', '1', '45', '1500533201');
 INSERT INTO `mg_goods` VALUES ('10', 'rtyu', 'rtyfgh', '0', '0', '2', '', '0', '0', '1500533201');
 INSERT INTO `mg_goods` VALUES ('11', '黄铜', '这个一个美丽的黄铜', '0', '0', '0', '', '0', '0', '0');
 INSERT INTO `mg_goods` VALUES ('14', '青铜手镯', '青铜手镯无敌', '11', '120', '11', '1234', '0', '0', '1500784381');
-INSERT INTO `mg_goods` VALUES ('15', 'nihao', 'dsaa', '43', '23', '4', '20', '0', '0', '1500786034');
+INSERT INTO `mg_goods` VALUES ('17', '项链', '这个是项链', '20', '1200', '1', '10', '0', '0', '1500882041');
+INSERT INTO `mg_goods` VALUES ('18', '手镯', '这个是手镯', '23', '250', '1', '24', '33', '0', '1500882280');
 
 -- ----------------------------
 -- Table structure for mg_month
@@ -105,13 +111,32 @@ CREATE TABLE `mg_month` (
   `mmoney` int(11) NOT NULL DEFAULT '0' COMMENT '月输入',
   `glid` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`mid`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mg_month
 -- ----------------------------
 INSERT INTO `mg_month` VALUES ('1', '201707', '32', '6', '21', '2');
 INSERT INTO `mg_month` VALUES ('2', '201706', '44', '8', '11', '4');
+INSERT INTO `mg_month` VALUES ('3', '201706', '78', '7', '32', '4');
+
+-- ----------------------------
+-- Table structure for mg_pz
+-- ----------------------------
+DROP TABLE IF EXISTS `mg_pz`;
+CREATE TABLE `mg_pz` (
+  `pzid` int(11) NOT NULL COMMENT '销售品牌表',
+  `pname` varchar(255) NOT NULL DEFAULT '' COMMENT '品牌名字',
+  `pmonth` varchar(255) NOT NULL DEFAULT '' COMMENT '牌子月份',
+  `ptotle` int(11) NOT NULL DEFAULT '0' COMMENT '牌子的销售数量',
+  `pgid` int(11) NOT NULL,
+  PRIMARY KEY (`pzid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of mg_pz
+-- ----------------------------
+INSERT INTO `mg_pz` VALUES ('1', '银子', '201706', '23', '2');
 
 -- ----------------------------
 -- Table structure for mg_sales
@@ -157,6 +182,31 @@ CREATE TABLE `mg_server` (
 INSERT INTO `mg_server` VALUES ('1', 'title', '六喜珠宝');
 
 -- ----------------------------
+-- Table structure for mg_stock
+-- ----------------------------
+DROP TABLE IF EXISTS `mg_stock`;
+CREATE TABLE `mg_stock` (
+  `sid` int(11) NOT NULL AUTO_INCREMENT COMMENT '货物id',
+  `sname` varchar(255) NOT NULL DEFAULT '' COMMENT '货物的名称',
+  `spric` varchar(255) NOT NULL DEFAULT '0' COMMENT '商品的价格',
+  `stime` varchar(255) NOT NULL DEFAULT '' COMMENT '商品的进货时间',
+  `snumber` int(11) NOT NULL DEFAULT '0' COMMENT '商品的个数',
+  `sdescribe` varchar(255) NOT NULL DEFAULT '' COMMENT '销售商品的附加信息',
+  `sweight` varchar(255) NOT NULL DEFAULT '' COMMENT '进货商品的单重量',
+  `smonth` varchar(255) NOT NULL DEFAULT '' COMMENT '在某年某月销售',
+  `gid` int(255) NOT NULL DEFAULT '0' COMMENT '销售的商品号',
+  `glid` int(11) NOT NULL DEFAULT '0' COMMENT '一级目录',
+  PRIMARY KEY (`sid`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='商品的信息表';
+
+-- ----------------------------
+-- Records of mg_stock
+-- ----------------------------
+INSERT INTO `mg_stock` VALUES ('1', 'xixi', '23', '', '1', '', '23', '201706', '5', '1');
+INSERT INTO `mg_stock` VALUES ('2', 'zs', '026', '', '2', '', '21', '201706', '6', '2');
+INSERT INTO `mg_stock` VALUES ('3', 'rtyu', '22', '', '2', '', '33', '201706', '10', '2');
+
+-- ----------------------------
 -- Table structure for mg_user
 -- ----------------------------
 DROP TABLE IF EXISTS `mg_user`;
@@ -176,7 +226,7 @@ CREATE TABLE `mg_user` (
 -- ----------------------------
 -- Records of mg_user
 -- ----------------------------
-INSERT INTO `mg_user` VALUES ('1', 'admin', '张帅', '74be16979710d4c4e7c6647856088456', '127.0.0.1', '1', '0', '1500771942', '3');
+INSERT INTO `mg_user` VALUES ('1', 'admin', '张帅', 'c3284d0f94606de1fd2af172aba15bf3', '127.0.0.1', '1', '0', '1500892020', '3');
 INSERT INTO `mg_user` VALUES ('3', 'zslmy', 'zslmy', '14e1b600b1fd579f47433b88e8d85291', '127.0.0.1', '0', '0', '1500741287', '0');
 
 -- ----------------------------
@@ -187,7 +237,7 @@ CREATE TABLE `mg_usermonth` (
   `umid` int(11) NOT NULL AUTO_INCREMENT,
   `uname` varchar(255) NOT NULL DEFAULT '' COMMENT '服务员姓名',
   `umtime` int(11) NOT NULL DEFAULT '0',
-  `umtotle` int(11) NOT NULL DEFAULT '0',
+  `umtotle` int(11) NOT NULL DEFAULT '0' COMMENT '服务员的销售',
   `uid` int(11) NOT NULL COMMENT '店员ID',
   `umweight` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`umid`)
@@ -196,5 +246,5 @@ CREATE TABLE `mg_usermonth` (
 -- ----------------------------
 -- Records of mg_usermonth
 -- ----------------------------
-INSERT INTO `mg_usermonth` VALUES ('1', '', '201707', '0', '4', '0');
-INSERT INTO `mg_usermonth` VALUES ('2', 'nihao', '201707', '0', '5', '0');
+INSERT INTO `mg_usermonth` VALUES ('1', '张帅', '201707', '3', '1', '0');
+INSERT INTO `mg_usermonth` VALUES ('2', 'zslmy', '201706', '0', '3', '0');

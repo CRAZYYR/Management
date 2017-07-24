@@ -1,18 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Manage;
+namespace App\Http\Controllers\Admin\Sale;
 
-use App\Http\Model\Month;
-use App\Http\Model\Pz;
-use App\Http\Model\Sales;
-use App\http\Model\Server;
-use App\Http\Model\Usermonth;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class ManageController extends Controller
+class TSaleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,21 +16,7 @@ class ManageController extends Controller
      */
     public function index()
     {
-        // 判断用户是否处于登录状态
-        if(!session('uinfo')){
-            return redirect('login');
-        }
-        // 多表联合查询，进行数据的统计
-        // 返回上一个月的销售记录
-        $month=Month::where(array('month.mtime'=>date('Ym',time())-1))->join('goods', 'goods.gid', '=', 'month.gid')->orderBy('month.mtotle','desc')->take(10)->get();
-        //上一月服务员的销售记录
-        $waiter=Usermonth::where(array('usermonth.umtime'=>date('Ym',time())-1))->join('user', 'user.uid', '=', 'usermonth.uid')->orderBy('usermonth.umtime','desc')->get();
-
-        // 上一月销量排行前四的品牌
-        $ghot=Pz::where(array('pz.pmonth'=>date('Ym',time())-1))->join('goods', 'goods.gid', '=', 'pz.pgid')->orderBy('pz.ptotle','desc')->take(4)->get();
-        $gmontht=Pz::where(array('pmonth'=>date('Ym',time())-1))->sum('ptotle');
-
-        return view('admin.manage.index',compact('month','waiter','ghot','gmontht'));
+        echo "string";
     }
 
     /**

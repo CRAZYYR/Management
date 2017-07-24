@@ -25,18 +25,17 @@ abstract class Controller extends BaseController
 
          $goods=Goods::where('lid','=',0)->orderBy('gmoney','desc')->get();
          // 销售最火的4类品牌
-        $ghot=Goods::where(['lid'=>0])->orderBy('gsale','desc')->take(4)->get();
+        // $ghot=Goods::where(['lid'=>0])->orderBy('gsale','desc')->take(4)->get();
         // 销售最火的6类商品
          $ghotch=Goods::where('lid','!=',0)->orderBy('gsale','desc')->take(6)->get();
         // 个人登录信息
         $uinfo=session('uinfo');
-        // 服务员的帐号信息
-         $waiter=User::orderBy('utotle','desc')->take(6)->get();
+
          // 网站的基本信息
         $server=Server::where(array('sname'=>'title'))->first();
         $title=$server->sdescribe;
         // // 顾客的基本信息
         // $customer=Customer::orderBy('cpoint','desc')->get();
-        View::share(array('title'=>$title,'uinfo'=>$uinfo,'ghot'=>$ghot,'ghotch'=>$ghotch,'waiter'=>$waiter,'goods'=>$goods));
+        View::share(array('title'=>$title,'uinfo'=>$uinfo,'ghotch'=>$ghotch,'goods'=>$goods));
    }
 }

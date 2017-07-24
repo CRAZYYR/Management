@@ -2,45 +2,44 @@
 
 namespace App\Http\Controllers\Admin\Goods;
 
+use App\Http\Model\Agoods;
 use App\Http\Model\Goods;
-use App\Http\Model\Month;
+use App\Http\Model\Stock;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
 
-class SaleController extends Controller
+class StockController extends Controller
 {
     /**
+     * 进货信息详单
      * Display a listing of the resource.
-     *获取月份
+     *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-            // 判断用户是否处于登录状态
-        if(!session('uinfo')){
-            return redirect('login');
-        }
-        $saleinfo=[];
-        $mtime=Month::select('mtime')->orderBy('mtime','desc')->distinct()->get();
+                $saleinfo=[];
+        $mtime=Agoods::select('agdata')->orderBy('agdata','desc')->distinct()->get();
         $goods=Goods::where(array('lid'=>0))->get();
        
-           $joins=Month::where('month.mtime',date('Ym',time()))->join('goods', 'goods.gid', '=', 'month.gid')->orderBy('month.mtotle','desc')->get();
+           $joins=Agoods::where('agoods.agdata',date('Ym',time()))->join('goods', 'goods.gid', '=', 'agoods.gid')->orderBy('agoods.agnumber','desc')->get();
 
                 foreach($goods as $good){
              foreach($joins as $k => $join){
 
-            if ($good->gid==$join->lid) {
+            if ($good->gid==$join->aglid) {
 
                  $saleinfo[$good->gname][$k]=$join;
             }
             
            }
          }
-// dd($saleinfo);
-        return view('admin.goods.saleGoods',compact('mtime','saleinfo'));
+
+
+        return view('admin.goods.stockGoods',compact('mtime','saleinfo'));
     }
 
     /**
@@ -106,29 +105,37 @@ class SaleController extends Controller
      */
     public function destroy($id)
     {
-        //
+                 // 判断用户是否处于登录状态
+        if(!session('uinfo')){
+            return redirect('login');
+        }
+        // 进行数据的删除
+       $rs=Goods::where(array('gid'=>$id))->delete();
+       if ($rs) {
+           return json_encode(array('state'=>1,'msg'=>'删除成功!'));
+       }else{
+        return json_encode(array('state'=>0,'msg'=>'删除失败!'));
+       }
     }
     /**
      * 异步进行月份数据的插入
      * @return [type] [description]
      */
     public function getMonthData(){
-            // 判断用户是否处于登录状态
-        if(!session('uinfo')){
-            return redirect('login');
-        }
 
         $input=Input::except('_token');
 
     $saleinfo=[];
+     $mtime=Agoods::select('agdata')->orderBy('agdata','desc')->distinct()->get();
         $goods=Goods::where(array('lid'=>0))->get();
        
-           $joins=Month::where('month.mtime',$input['mtime'])->join('goods', 'goods.gid', '=', 'month.gid')->orderBy('month.mtotle','desc')->get();
-            
-            foreach($goods as $good){
+      $joins=Agoods::where('agoods.agdata',$input['agdata'])->join('goods', 'goods.gid', '=', 'agoods.gid')->orderBy('agoods.agnumber','desc')->get();
+
+
+                foreach($goods as $good){
              foreach($joins as $k => $join){
 
-            if ($good->gid==$join->lid) {
+            if ($good->gid==$join->aglid) {
 
                  $saleinfo[$good->gname][$k]=$join;
             }
@@ -147,16 +154,16 @@ $str='';
  
         <div class="panel panel-default">
 
-            <div class="panel-heading no-collapse" style="text-align: center;">('.$ke.') 销售情况</div>
+            <div class="panel-heading no-collapse" style="text-align: center;">('.$ke.') 进货信息</div>
         ';
    $str.=' <table class="table table-bordered table-striped" >
               <thead>
          <tr>
       <th>商品名</th>
-      <th>商品单价</th>
-      <th>销售件数</th>
-      <th>销售盈利</th>
-    
+      <th>单价</th>
+      <th>件数</th>
+      <th>单重</th>
+      <th>时间</th>
       <th style="width: 3.5em;"></th>
     </tr>
               </thead>
@@ -169,21 +176,18 @@ $str.=    '</tr>
               <tbody>
 
     <tr>
-      <td>'.$v->gname.'</td>
-      <td>'.$v->gpri.'</td>
-      <td>'.$v->mtotle.'</td>
-      <td>'.$v->mmoney.'</td></tr>';
-
-    // $str.='<td>
-    //       <a href="'.url('customervip').'/'.$v->gid.'" ';
+      <td>'.$v->agname.'</td>
+      <td>'.$v->agpric.'</td>
+      <td>'.$v->agnumber.'</td>
+      <td>'.$v->agweight.'</td>
+      <td>'.date('y-m-d',$v->agtime).'</td>';
 
 
 
-    // $str.=' class="update" ><i class="fa fa-pencil"></i></a>
-    //       <a href="#" role="button" data-toggle="modal" class="delete" value="'.$v->gid.'"><i class="fa fa-trash-o"></i></a>
-    //   </td>
-    // </tr>';
- 
+    $str.='<td>
+          <a href="#" role="button" data-toggle="modal" class="delete" value="'.$v->gid.'"><i class="fa fa-trash-o"></i></a>
+      </td>
+    </tr>';
              }
 
 
@@ -200,59 +204,6 @@ $str.= '  </tbody>
 
         }
 
-//     foreach($saleinfo as $k => $v)  {
-//         $str.='<div class="row">
-
-// <div class="col-sm-6 col-md-12">
-
- 
-//         <div class="panel panel-default">
-
-//             <div class="panel-heading no-collapse" style="text-align: center;">'.$k.'==销售情况</div>
-//         ';
-//    $str.=' <table class="table table-bordered table-striped" >
-//               <thead>
-//          <tr>
-//       <th>商品名</th>
-//       <th>商品单价</th>
-//       <th>销售件数</th>
-//       <th>销售盈利</th>
-    
-//       <th style="width: 3.5em;"></th>
-//     </tr>
-//               </thead>
-//               <tbody>
-
-//     <tr>
-//       <td>'.$v->gname.'</td>
-//       <td>'.$v->gpri.'</td>
-//       <td>'.$v->mtotle.'</td>
-//       <td>'.$v->mmoney.'</td>';
-
-//     $str.='<td>
-//           <a href="'.url('customervip').'/'.$v->gid.'" ';
-
-
-
-//     $str.=' class="update" ><i class="fa fa-pencil"></i></a>
-//           <a href="#" role="button" data-toggle="modal" class="delete" value="'.$v->gid.'"><i class="fa fa-trash-o"></i></a>
-//       </td>
-//     </tr>
- 
-
-//               </tbody>
-//             </table>
-//         </div>
-
-       
-//     </div>
-
-
-// </div>';
-
-// }
-    // 进行数据的拼接并返回结束
-    // 
     echo $str;
 
             }

@@ -47,3 +47,13 @@ Route::get('help', function(){
   Route::resource('sale', 'Admin\Goods\SaleController');
  
   Route::post('getMonthData', 'Admin\Goods\SaleController@getMonthData');
+  // 进货账单详情
+   Route::resource('stock', 'Admin\Goods\StockController');
+    Route::post('getMonth', 'Admin\Goods\StockController@getMonthData');
+
+    // 服务员的销售账单
+     Route::resource('wsale', 'Admin\Sale\WSaleController');
+     // 总的销售账单
+    Route::resource('totlesalet', 'Admin\Sale\TSaleController');
+    
+        Route::post('wsalegetmonth', 'Admin\Sale\WSaleController@getMonthData');

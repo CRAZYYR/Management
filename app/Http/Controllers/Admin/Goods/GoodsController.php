@@ -120,7 +120,7 @@ class GoodsController extends Controller
       $input=  Input::except('_token');
 
        $input['gtime']=time();
-          $rs=Goods::insert($input);
+          $rs=Goods::insertGetId($input);
        if ($rs) {
            $rs=Agoods::insert(array(
             'agnumber'=>$input['gnumber'],
@@ -130,6 +130,8 @@ class GoodsController extends Controller
             'agtime'=>time(),
             'agdata'=>date('Ym',time()),
              'aglid'=>$input['lid'],
+             'gid'=>$rs,
+             'agweight'=>$input['gweight'],
             ));
            if (!$rs) {
               return back()->with('error','添加商品失败!');
