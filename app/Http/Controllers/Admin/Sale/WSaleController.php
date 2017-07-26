@@ -28,9 +28,9 @@ class WSaleController extends Controller
         $mtime=Usermonth::select('umtime')->orderBy('umtime','desc')->distinct()->get();
       
        
-           $saleinfo=Usermonth::where('usermonth.umtime',date('Ym',time()))->join('user', 'user.uid', '=', 'usermonth.uid')->orderBy('usermonth.umtotle','desc')->get();
+           $saleinfos=Usermonth::where('usermonth.umtime',date('Ym',time()))->join('user_cache', 'user_cache.uid', '=', 'usermonth.uid')->orderBy('usermonth.umtotle','desc')->get();
 
-        return view('admin.sale.wsaleGoods',compact('mtime','saleinfo'));
+        return view('admin.sale.wsaleGoods',compact('mtime','saleinfos'));
     }
 
     /**
@@ -111,7 +111,7 @@ class WSaleController extends Controller
         $mtime=Usermonth::select('umtime')->orderBy('umtime','desc')->distinct()->get();
       
        
-           $saleinfo=Usermonth::where('usermonth.umtime',$input['umtime'])->join('user', 'user.uid', '=', 'usermonth.uid')->orderBy('usermonth.umtotle','desc')->get();
+           $saleinfos=Usermonth::where('usermonth.umtime',$input['umtime'])->join('user_cache', 'user_cache.uid', '=', 'usermonth.uid')->orderBy('usermonth.umtotle','desc')->get();
 
     // 进行数据的拼接并返回
 $str='';
@@ -135,7 +135,7 @@ $str='';
     </tr>
               </thead>
               <tbody>';
-               foreach($saleinfo as $k => $v){
+               foreach($saleinfos as $k => $v){
 
 
     $str.=    '</tr>

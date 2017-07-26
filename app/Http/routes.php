@@ -57,3 +57,4 @@ Route::get('help', function(){
     Route::resource('totlesalet', 'Admin\Sale\TSaleController');
     
         Route::post('wsalegetmonth', 'Admin\Sale\WSaleController@getMonthData');
+             Route::post('totlesalegetmonth', 'Admin\Sale\TSaleController@getMonthData');

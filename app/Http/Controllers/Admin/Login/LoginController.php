@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin\Login;
 
+use App\Http\Model\Goods_Cache;
 use App\http\Model\User;
 use Illuminate\Http\Request;
 
@@ -120,6 +121,7 @@ class LoginController extends Controller
      */
     public function update(Request $request, $id)
     {
+
         //
     }
 

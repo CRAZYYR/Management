@@ -38,12 +38,10 @@
       <th>账户</th>
       <th>姓名</th>
       <th>销售量(件)</th>
-
-
     </tr>
               </thead>
               <tbody>
-            @foreach($saleinfo as $v)
+            @foreach($saleinfos as $v)
 
     <tr>
       <td>{{$v->uaccount}}</td>
@@ -64,7 +62,6 @@
 
 
 </div>
-
 
 
 

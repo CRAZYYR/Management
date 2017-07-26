@@ -4,7 +4,7 @@
     <div class="content">
         <div class="header">
             
-            <h1 class="page-title">销售信息</h1>
+            <h1 class="page-title">本店服务员整体销售情况</h1>
 
         </div>
 
@@ -13,7 +13,7 @@
            <label>时间段选择 </label>
         <select name="lid" class="list" onchange="change()">
         @foreach($mtime as $mtime)
-  <option value ="{{$mtime->mtime}}">{{$mtime->mtime}}</option>
+  <option value ="{{$mtime->smonth}}">{{$mtime->smonth}}</option>
   @endforeach
         </select>
 
@@ -21,40 +21,43 @@
 
         <div class="main-content mondatashow" >
             
-@foreach($saleinfo as $ke => $va)
+
   
 <div class="row">
 
-<div class="col-sm-6 col-md-12">
+<div class="col-sm-10 col-md-12">
 
  
         <div class="panel panel-default">
 
-            <div class="panel-heading no-collapse" style="text-align: center;">({{$ke}}) 销售情况</div>
+            <div class="panel-heading no-collapse" style="text-align: center;">本店服务员总体销售情况</div>
         
             <table class="table table-bordered table-striped" >
               <thead>
          <tr>
-      <th>商品名</th>
-      <th>商品单价</th>
-      <th>销售件数</th>
-      <th>销售盈利</th>
-    
-      <th style="width: 3.5em;"></th>
+      <th>账户</th>
+      <th>姓名</th>
+       <th>顾客</th>
+       <th>商品名</th>
+      <th>价格</th>
+      <th>数量</th>
+      <th>时间</th>
     </tr>
               </thead>
               <tbody>
- @foreach($va as $k => $v)
+            @foreach($saleinfos as $v)
+
     <tr>
-      <td>{{$v->gname}}</td>
-      <td>{{$v->gpri}}</td>
-      <td>{{$v->mtotle}}</td>
-      <td>{{$v->mmoney}}</td>
+      <td>{{$v->uaccount}}</td>
+      <td>{{$v->uname}}</td>
+      <td>{{$v->cname}}</td>
+      <td>{{$v->sname}}</td>
+      <td>{{$v->spric}}</td>
+      <td>{{$v->snumber}}</td>
+      <td>{{date('Y-m-d H:i:s',$v->stime)}}</td>
+
     
-<!--       <td>
-          <a href="{{url('customervip').'/'.$v->gid}}" class="update" ><i class="fa fa-pencil"></i></a>
-          <a href="#" role="button" data-toggle="modal" class="delete" value="{{$v->gid}}"><i class="fa fa-trash-o"></i></a>
-      </td> -->
+
     </tr>
   @endforeach
 
@@ -68,8 +71,6 @@
 
 </div>
 
-  @endforeach
-
 
 
 
@@ -79,7 +80,7 @@
 // 动态的改变月份数据
 function change(){
 var mtime=$('.list').find(" option:selected").val();
-$.post("{{url('getMonthData')}}",{'mtime':mtime,'_token':'{{csrf_token()}}'},function(data){
+$.post("{{url('totlesalegetmonth')}}",{'smonth':mtime,'_token':'{{csrf_token()}}'},function(data){
       // if (data.state) {
                $('.mondatashow').empty();
                $('.mondatashow').append(data);

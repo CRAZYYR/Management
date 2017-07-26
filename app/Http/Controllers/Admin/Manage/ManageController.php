@@ -27,12 +27,12 @@ class ManageController extends Controller
         }
         // 多表联合查询，进行数据的统计
         // 返回上一个月的销售记录
-        $month=Month::where(array('month.mtime'=>date('Ym',time())-1))->join('goods', 'goods.gid', '=', 'month.gid')->orderBy('month.mtotle','desc')->take(10)->get();
+        $month=Month::where(array('month.mtime'=>date('Ym',time())-1))->join('goods_cache', 'goods_cache.gid', '=', 'month.gid')->orderBy('month.mtotle','desc')->take(10)->get();
         //上一月服务员的销售记录
-        $waiter=Usermonth::where(array('usermonth.umtime'=>date('Ym',time())-1))->join('user', 'user.uid', '=', 'usermonth.uid')->orderBy('usermonth.umtime','desc')->get();
+        $waiter=Usermonth::where(array('usermonth.umtime'=>date('Ym',time())-1))->join('user_cache', 'user_cache.uid', '=', 'usermonth.uid')->orderBy('usermonth.umtime','desc')->get();
 
         // 上一月销量排行前四的品牌
-        $ghot=Pz::where(array('pz.pmonth'=>date('Ym',time())-1))->join('goods', 'goods.gid', '=', 'pz.pgid')->orderBy('pz.ptotle','desc')->take(4)->get();
+        $ghot=Pz::where(array('pz.pmonth'=>date('Ym',time())-1))->join('goods_cache', 'goods_cache.gid', '=', 'pz.pgid')->orderBy('pz.ptotle','desc')->take(4)->get();
         $gmontht=Pz::where(array('pmonth'=>date('Ym',time())-1))->sum('ptotle');
 
         return view('admin.manage.index',compact('month','waiter','ghot','gmontht'));

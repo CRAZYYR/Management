@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\User;
 
 use App\http\Model\User;
+use App\Http\Model\User_Cache;
 use App\Http\Model\Usermonth;
 use Illuminate\Http\Request;
 
@@ -66,8 +67,8 @@ class UserController extends Controller
           $uid=User::insertGetId($input);
           if ($uid) {
 
-            $array=array('uid'=>$uid,'uname'=>$input['uname'],'umtime'=>date('Ym',time()));
-               $rs=Usermonth::insert($array);
+            $array=array('uid'=>$uid,'uname'=>$input['uname'],'uaccount'=>$input['uaccount']);
+               $rs=User_Cache::insert($array);
                if ($rs) {
                    return redirect('wuser');
                }else{

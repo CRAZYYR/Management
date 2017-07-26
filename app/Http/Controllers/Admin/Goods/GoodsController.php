@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin\Goods;
 
 use App\Http\Model\Agoods;
 use App\Http\Model\Goods;
+use App\Http\Model\Goods_Cache;
+use App\Http\Model\Pz;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -56,8 +58,15 @@ class GoodsController extends Controller
             return redirect('login');
         }
        $input= Input::except('_token');
-       $rs=Goods::insert($input);
+     
+       $rs=Goods::insertGetId($input);
        if ($rs) {
+        $pz['pname']=$input['gname'];
+        $pz['pmonth']=date('Ym',time());
+
+        $pz['pgid']=$rs;
+
+          Pz::insert($pz);
           return back()->with('error','添加品牌成功!');
        }else{
           return back()->with('error','添加品牌失败!');
@@ -122,7 +131,10 @@ class GoodsController extends Controller
        $input['gtime']=time();
           $rs=Goods::insertGetId($input);
        if ($rs) {
-           $rs=Agoods::insert(array(
+
+        $input['gid']=$rs;
+               Goods_Cache::insert($input);
+           $rs=Agoods::insertGetId(array(
             'agnumber'=>$input['gnumber'],
             'agpric'=>$input['gpri'],
             'agname'=>$input['gname'],
@@ -136,6 +148,7 @@ class GoodsController extends Controller
            if (!$rs) {
               return back()->with('error','添加商品失败!');
            }
+    
           return back()->with('error','添加商品成功!');
        }else{
           return back()->with('error','添加商品失败!');

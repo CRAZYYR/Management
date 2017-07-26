@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\Goods;
 
 use App\Http\Model\Goods;
+use App\Http\Model\Goods_Cache;
 use App\Http\Model\Month;
 use Illuminate\Http\Request;
 
@@ -25,9 +26,9 @@ class SaleController extends Controller
         }
         $saleinfo=[];
         $mtime=Month::select('mtime')->orderBy('mtime','desc')->distinct()->get();
-        $goods=Goods::where(array('lid'=>0))->get();
+        $goods=Goods_Cache::where(array('lid'=>0))->get();
        
-           $joins=Month::where('month.mtime',date('Ym',time()))->join('goods', 'goods.gid', '=', 'month.gid')->orderBy('month.mtotle','desc')->get();
+           $joins=Month::where('month.mtime',date('Ym',time()))->join('goods_cache', 'goods_cache.gid', '=', 'month.gid')->orderBy('month.mtotle','desc')->get();
 
                 foreach($goods as $good){
              foreach($joins as $k => $join){
@@ -83,6 +84,7 @@ class SaleController extends Controller
      */
     public function edit($id)
     {
+        
         //
     }
 
@@ -121,9 +123,9 @@ class SaleController extends Controller
         $input=Input::except('_token');
 
     $saleinfo=[];
-        $goods=Goods::where(array('lid'=>0))->get();
+        $goods=Goods_Cache::where(array('lid'=>0))->get();
        
-           $joins=Month::where('month.mtime',$input['mtime'])->join('goods', 'goods.gid', '=', 'month.gid')->orderBy('month.mtotle','desc')->get();
+           $joins=Month::where('month.mtime',$input['mtime'])->join('goods_cache', 'goods_cache.gid', '=', 'month.gid')->orderBy('month.mtotle','desc')->get();
             
             foreach($goods as $good){
              foreach($joins as $k => $join){

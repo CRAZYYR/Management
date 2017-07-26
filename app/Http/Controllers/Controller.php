@@ -22,7 +22,7 @@ abstract class Controller extends BaseController
             return redirect('login');
         }
 
-
+        date_default_timezone_set('PRC');
          $goods=Goods::where('lid','=',0)->orderBy('gmoney','desc')->get();
          // 销售最火的4类品牌
         // $ghot=Goods::where(['lid'=>0])->orderBy('gsale','desc')->take(4)->get();

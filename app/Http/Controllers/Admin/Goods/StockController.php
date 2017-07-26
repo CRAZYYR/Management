@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin\Goods;
 
 use App\Http\Model\Agoods;
 use App\Http\Model\Goods;
+use App\Http\Model\Goods_Cache;
 use App\Http\Model\Stock;
 use Illuminate\Http\Request;
 
@@ -23,9 +24,9 @@ class StockController extends Controller
     {
                 $saleinfo=[];
         $mtime=Agoods::select('agdata')->orderBy('agdata','desc')->distinct()->get();
-        $goods=Goods::where(array('lid'=>0))->get();
+        $goods=  Goods_Cache::where(array('lid'=>0))->get();
        
-           $joins=Agoods::where('agoods.agdata',date('Ym',time()))->join('goods', 'goods.gid', '=', 'agoods.gid')->orderBy('agoods.agnumber','desc')->get();
+           $joins=Agoods::where('agoods.agdata',date('Ym',time()))->join('goods_cache', 'goods_cache.gid', '=', 'agoods.gid')->orderBy('agoods.agnumber','desc')->get();
 
                 foreach($goods as $good){
              foreach($joins as $k => $join){
@@ -60,6 +61,7 @@ class StockController extends Controller
      */
     public function store(Request $request)
     {
+      
         //
     }
 
@@ -127,9 +129,9 @@ class StockController extends Controller
 
     $saleinfo=[];
      $mtime=Agoods::select('agdata')->orderBy('agdata','desc')->distinct()->get();
-        $goods=Goods::where(array('lid'=>0))->get();
+        $goods=Goods_Cache::where(array('lid'=>0))->get();
        
-      $joins=Agoods::where('agoods.agdata',$input['agdata'])->join('goods', 'goods.gid', '=', 'agoods.gid')->orderBy('agoods.agnumber','desc')->get();
+      $joins=Agoods::where('agoods.agdata',$input['agdata'])->join('goods_cache', 'goods_cache.gid', '=', 'agoods.gid')->orderBy('agoods.agnumber','desc')->get();
 
 
                 foreach($goods as $good){
