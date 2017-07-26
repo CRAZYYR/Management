@@ -154,12 +154,12 @@
             <li ><a href="{{url('totlesalet')}}"><span class="fa fa-caret-right"></span> 整体销售账单</a></li>
     </ul></li>
 
-        <li><a href="#" data-target=".legal-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-legal"></i> 货物信息<i class="fa fa-collapse"></i></a></li>
+        <li><a href="#" data-target=".legal-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-legal"></i> 网站基本信息<i class="fa fa-collapse"></i></a></li>
         <li><ul class="legal-menu nav nav-list collapse">
-            <li ><a href="privacy-policy.html"><span class="fa fa-caret-right"></span> 店员销售表</a></li>
-            <li ><a href="terms-and-conditions.html"><span class="fa fa-caret-right"></span> 商品销售总表</a></li>
-               <li ><a href="terms-and-conditions.html"><span class="fa fa-caret-right"></span> 进货信息总表</a></li>
-             <li ><a href="terms-and-conditions.html"><span class="fa fa-caret-right"></span> 商品剩余总表</a></li>
+            <li ><a href="privacy-policy.html"><span class="fa fa-caret-right"></span> 网站标题</a></li>
+            <li ><a href="terms-and-conditions.html"><span class="fa fa-caret-right"></span> 登录标题</a></li>
+               <li ><a href="terms-and-conditions.html"><span class="fa fa-caret-right"></span> 网站底部说明</a></li>
+           
     </ul></li>
 
         <li><a href="{{url('help')}}" class="nav-header"><i class="fa fa-fw fa-question-circle"></i> 帮助</a></li>
