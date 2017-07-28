@@ -146,10 +146,12 @@
 
         <li><a href="#" data-target=".accounts-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-briefcase"></i> 账单信息<i class="fa fa-collapse"></i> </a></li>
         <li><ul class="accounts-menu nav nav-list collapse">
-         <li ><a href="{{url('goods')}}"><span class="fa fa-caret-right"></span> 添加品牌</a></li>
+         <li ><a href="{{url('goods')}}"><span class="fa fa-caret-right"></span> 添加分类</a></li>
             <li ><a href="{{url('goods/create')}}"><span class="fa fa-caret-right"></span> 添加商品</a></li>
+
          <li ><a href="{{url('stock')}}"><span class="fa fa-caret-right"></span> 进货账单</a></li>
-            <li ><a href="{{url('sale')}}"><span class="fa fa-caret-right"></span> 销售账单</a></li>
+            <li ><a href="{{url('sale')}}"><span class="fa fa-caret-right"></span> 销售账单</a></li>  
+             <li ><a href="{{url('deletegoods')}}"><span class="fa fa-caret-right"></span> 货物游览与下架</a></li>
             <li ><a href="{{url('wsale')}}"><span class="fa fa-caret-right"></span> 服务员销售账单</a></li>
             <li ><a href="{{url('totlesalet')}}"><span class="fa fa-caret-right"></span> 整体销售账单</a></li>
     </ul></li>

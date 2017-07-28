@@ -40,7 +40,7 @@
       <th>销售件数</th>
       <th>销售盈利</th>
     
-      <th style="width: 3.5em;"></th>
+    <!--   <th style="width: 3.5em;"></th> -->
     </tr>
               </thead>
               <tbody>

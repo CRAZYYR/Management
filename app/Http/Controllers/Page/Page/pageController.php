@@ -1,13 +1,18 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Manage;
+namespace App\Http\Controllers\Page\Page;
 
+use App\Http\Model\Goods;
+use App\Http\Model\Goods_Cache;
+use App\Http\Model\Pz;
+use App\Http\Model\Sales;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Input;
 
-class WaiterController extends Controller
+class pageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,11 +21,15 @@ class WaiterController extends Controller
      */
     public function index()
     {
-          // 判断用户是否处于登录状态
+            // 判断用户是否处于登录状态
         if(!session('uinfo')){
             return redirect('login');
         }
-        echo "顾客记录表!";
+
+
+        $salelists=Sales::where(array('uid'=>session('uinfo')['uid'],'smonth'=>date('Ym',time())))->join('pz', 'pz.pgid', '=', 'sales.glid')->paginate(20);
+
+        return view('page.pagesale',compact('salelists'));
     }
 
     /**
@@ -30,7 +39,8 @@ class WaiterController extends Controller
      */
     public function create()
     {
-        //
+        $glids=Goods::where('lid','!=',0)->get();
+        return view('page.salegoods',compact('glids'));
     }
 
     /**
@@ -41,7 +51,16 @@ class WaiterController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input= Input::except('_token');
+        $glid=Goods::where('gid',$input['gid'])->first();
+        $input['glid']=$glid->lid;
+        $input['sname']=$glid->gname;
+        $input['stime']=time();
+        $input['smonth']=date('Ym',time());
+        $input['uname']=session('uinfo')['uname'];
+       $input['uaccount']=session('uinfo')['account'];
+        $input['uid']=session('uinfo')['uid'];
+        dd($input);
     }
 
     /**
@@ -87,5 +106,10 @@ class WaiterController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    // 密码修改
+    public function updatepw(){
+
     }
 }

@@ -105,6 +105,8 @@
 
               <ul class="dropdown-menu">
                 <li><a href="">{{$uinfo['account']}}</a></li>
+                 <li class="divider"></li>
+                <li><a href="{{url('waiter')}}">修改密码</a></li>
                 <li class="divider"></li>
                 <li><a tabindex="-1" href="{{url('loginout')}}">退出登录</a></li>
               </ul>
@@ -118,41 +120,20 @@
 
     <div class="sidebar-nav">
     <ul>
-    <li><a href="#" data-target=".dashboard-menu" class="nav-header" data-toggle="collapse"><i class="fa fa-fw fa-dashboard"></i> 本店基本信息<i class="fa fa-collapse"></i></a></li>
+    <li><a href="#" data-target=".dashboard-menu" class="nav-header" data-toggle="collapse"><i class="fa fa-fw fa-dashboard"></i> 我的信息<i class="fa fa-collapse"></i></a></li>
     <li><ul class="dashboard-menu nav nav-list collapse in">
-            <li><a href="{{url('manage')}}"><span class="fa fa-caret-right"></span>销售基本信息</a></li>
-            <li ><a href="users.html"><span class="fa fa-caret-right"></span> 普通顾客信息</a></li>
-            <li ><a href="user.html"><span class="fa fa-caret-right"></span>VIP顾客信息</a></li>
-           
+            <li><a href="{{url('waiter')}}"><span class="fa fa-caret-right"></span>销售基本信息</a></li>
+            <li ><a href="{{url('waiter')}}/create"><span class="fa fa-caret-right"></span> 记录账单</a></li>
+                <li ><a href="users.html"><span class="fa fa-caret-right"></span> VIP会员信息</a></li>
+
+       
     </ul></li>
 
-    <li data-popover="true" data-content="Items in this group require a <strong><a href='#' target='blank'>premium license</a><strong>." rel="popover" data-placement="right"><a href="#" data-target=".premium-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-fighter-jet"></i> 账户管理<i class="fa fa-collapse"></i></a></li>
-        <li><ul class="premium-menu nav nav-list collapse">
-             
-            <li ><a href="premium-profile.html"><span class="fa fa-caret-right"></span> 店员帐号管理</a></li>
-           
-            <li ><a href="premium-blog-item.html"><span class="fa fa-caret-right"></span> 顾客VIP管理</a></li>
-            <li ><a href="premium-pricing-tables.html"><span class="fa fa-caret-right"></span> 超级用户管理</a></li>
-        
-    </ul></li>
 
-        <li><a href="#" data-target=".accounts-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-briefcase"></i> 账单信息<i class="fa fa-collapse"></i> </a></li>
-        <li><ul class="accounts-menu nav nav-list collapse">
-            <li ><a href="sign-in.html"><span class="fa fa-caret-right"></span> 进货账单</a></li>
-            <li ><a href="sign-up.html"><span class="fa fa-caret-right"></span> 销售账单</a></li>
-            <li ><a href="sign-up.html"><span class="fa fa-caret-right"></span> 售后服务账单</a></li>
-            <li ><a href="reset-password.html"><span class="fa fa-caret-right"></span> 利润信息账单</a></li>
-    </ul></li>
 
-        <li><a href="#" data-target=".legal-menu" class="nav-header collapsed" data-toggle="collapse"><i class="fa fa-fw fa-legal"></i> 货物信息<i class="fa fa-collapse"></i></a></li>
-        <li><ul class="legal-menu nav nav-list collapse">
-            <li ><a href="privacy-policy.html"><span class="fa fa-caret-right"></span> 店员销售表</a></li>
-            <li ><a href="terms-and-conditions.html"><span class="fa fa-caret-right"></span> 商品销售总表</a></li>
-               <li ><a href="terms-and-conditions.html"><span class="fa fa-caret-right"></span> 进货信息总表</a></li>
-             <li ><a href="terms-and-conditions.html"><span class="fa fa-caret-right"></span> 商品剩余总表</a></li>
-    </ul></li>
 
-        <li><a href="help.html" class="nav-header"><i class="fa fa-fw fa-question-circle"></i> Help</a></li>
+
+    <li><a href="{{url('help')}}" class="nav-header"><i class="fa fa-fw fa-question-circle"></i> 帮助</a></li>
             
             </ul>
     </div>

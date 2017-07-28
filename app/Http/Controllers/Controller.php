@@ -23,7 +23,7 @@ abstract class Controller extends BaseController
         }
 
         date_default_timezone_set('PRC');
-         $goods=Goods::where('lid','=',0)->orderBy('gmoney','desc')->get();
+       //  $goods=Goods::where('lid','=',0)->orderBy('gmoney','desc')->get();
          // 销售最火的4类品牌
         // $ghot=Goods::where(['lid'=>0])->orderBy('gsale','desc')->take(4)->get();
         // 销售最火的6类商品
@@ -36,6 +36,6 @@ abstract class Controller extends BaseController
         $title=$server->sdescribe;
         // // 顾客的基本信息
         // $customer=Customer::orderBy('cpoint','desc')->get();
-        View::share(array('title'=>$title,'uinfo'=>$uinfo,'ghotch'=>$ghotch,'goods'=>$goods));
+        View::share(array('title'=>$title,'uinfo'=>$uinfo,'ghotch'=>$ghotch));
    }
 }

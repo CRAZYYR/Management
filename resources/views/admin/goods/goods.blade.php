@@ -3,7 +3,7 @@
     <div class="content">
         <div class="header">
             
-            <h1 class="page-title">品牌->添加</h1>
+            <h1 class="page-title">分类->添加</h1>
      
 
         </div>

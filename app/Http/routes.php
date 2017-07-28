@@ -21,8 +21,7 @@ Route::get('test', function(){
 });
 // 主页面路由
 Route::resource('manage', 'Admin\Manage\ManageController');
-// 服务员信息路由
-Route::resource('waiter', 'Admin\Manage\WaiterController');
+
 // 顾客信息路由
 Route::resource('customer', 'Admin\Customer\CustomerController');
 
@@ -56,5 +55,15 @@ Route::get('help', function(){
      // 总的销售账单
     Route::resource('totlesalet', 'Admin\Sale\TSaleController');
     
-        Route::post('wsalegetmonth', 'Admin\Sale\WSaleController@getMonthData');
-             Route::post('totlesalegetmonth', 'Admin\Sale\TSaleController@getMonthData');
+    Route::post('wsalegetmonth', 'Admin\Sale\WSaleController@getMonthData');
+  Route::post('totlesalegetmonth', 'Admin\Sale\TSaleController@getMonthData');
+  
+     Route::resource('deletegoods', 'Admin\Goods\DeleteController');
+
+
+
+
+
+     // 前台服务员销售管理
+Route::resource('waiter', 'Page\Page\pageController');
+Route::get('updatepw', 'Page\Page\pageController@updatepw');
