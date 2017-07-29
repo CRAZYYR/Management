@@ -51,7 +51,7 @@ class pageController extends Controller
      */
     public function store(Request $request)
     {
-        $input= Input::except('_token');
+                $input= Input::except('_token');
         $glid=Goods::where('gid',$input['gid'])->first();
         $input['glid']=$glid->lid;
         $input['sname']=$glid->gname;
