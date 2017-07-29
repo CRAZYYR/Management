@@ -3,9 +3,9 @@
     <div class="content">
         <div class="header">
             <div class="stats">
-    <p class="stat"><span class="label label-info">5</span> Tickets</p>
-    <p class="stat"><span class="label label-success">27</span> Tasks</p>
-    <p class="stat"><span class="label label-danger">15</span> Overdue</p>
+    <p class="stat"><span class="label label-info">{{date('Y',time())}}</span> 年</p>
+    <p class="stat"><span class="label label-success">{{date('m',time())}}</span>月</p>
+    <p class="stat"><span class="label label-danger">{{date('d',time())}}</span> 日</p>
 </div>
 
             <h1 class="page-title">欢迎你的光临</h1>
