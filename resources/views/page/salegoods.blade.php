@@ -1,4 +1,4 @@
-@extends('layout.left')
+@extends('layout.page')
 @section('content')
     <div class="content">
         <div class="header">
@@ -32,7 +32,7 @@
         </div>
 
        <div class="form-group">
-        <label>价格</label>
+        <label>价格(元)</label>
         <input name="spric" type="text" placeholder="请输入价格!"  class="form-control">
         </div>
 
@@ -43,7 +43,7 @@
 
 
            <div class="form-group">
-        <label>重量</label>
+        <label>重量(g)</label>
         <input name="sweight" type="text" placeholder="请输入商品重量!"  class="form-control">
         </div>
 

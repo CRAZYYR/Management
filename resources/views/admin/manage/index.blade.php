@@ -94,11 +94,13 @@
                 </tr>
               </thead>
               <tbody>
-              @foreach($waiter as $waiter)
+
+              @foreach($waiter as $wa)
+
                 <tr>
-                  <td>{{$waiter->uaccount}}</td>
-                  <td>{{$waiter->uname}}</td>
-                  <td>{{$waiter->umtotle}}</td>
+                  <td>{{$wa->uaccount}}</td>
+                  <td>{{$wa->uname}}</td>
+                  <td>{{$wa->umtotle}}</td>
                 </tr>
                @endforeach
               </tbody>

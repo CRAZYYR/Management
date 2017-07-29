@@ -1,4 +1,4 @@
-@extends('layout.left')
+@extends('layout.page')
 @section('content')
     <div class="content">
         <div class="header">
@@ -15,7 +15,7 @@
     <br>
     <div id="myTabContent" class="tab-content">
       <div class="tab-pane active in" id="home">
-      <form id="tab" method="post"  action="{{asset('customervip').'/'.$rs->cid}}">
+      <form id="tab" method="post"  action="{{asset('pagevip').'/'.$rs->cid}}">
           {{method_field("PUT")}}
            {{csrf_field()}}
          

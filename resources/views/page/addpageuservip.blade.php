@@ -1,4 +1,4 @@
-@extends('layout.left')
+@extends('layout.page')
 @section('content')
     <div class="content">
         <div class="header">
@@ -7,6 +7,9 @@
      
 
         </div>
+                @if(session('error'))
+                <h2>{{session('error')}}</h2> 
+                 @endif
         <div class="main-content">
             
 
@@ -15,44 +18,39 @@
     <br>
     <div id="myTabContent" class="tab-content">
       <div class="tab-pane active in" id="home">
-      <form id="tab" method="post"  action="{{asset('customervip').'/'.$rs->cid}}">
-          {{method_field("PUT")}}
+      <form id="tab" method="post"  action="{{asset('pagevip')}}">
+    
            {{csrf_field()}}
          
         <div class="form-group">
         <label>姓名</label>
-        <input name="cname" type="text" value="{{$rs->cname}}" class="form-control">
+        <input name="cname" type="text" placeholder="请输入VIP姓名!"  class="form-control">
         </div>
         <div class="form-group">
         <label>身份证号码</label>
-        <input name="ccard" type="text" value="{{$rs->ccard}}" class="form-control">
+        <input name="ccard" type="text" placeholder="请输入VIP身份证帐号"  class="form-control">
         </div>
-         <div class="form-group">
-        <label>积分</label>
-        <input name="cpoint" type="text" value="{{$rs->cpoint}}" class="form-control">
-        </div>
+       
        
         <div class="form-group">
         <label>联系方式</label>
-        <input name="cphone" type="text" value="{{$rs->cphone}}" class="form-control">
+        <input name="cphone" type="text" placeholder="请输入VIP联系方式" class="form-control">
         </div>
         <div class="form-group">
         <label>地址</label>
-        <input name="caddress" type="text" value="{{$rs->caddress}}" class="form-control">
+        <input name="caddress" type="text" placeholder="请输入VIP地址"  class="form-control">
         </div>
 
        
   
 
     <div class="btn-toolbar list-toolbar">
-      <button class="btn btn-primary"><i class="fa fa-save"></i> 修改</button>
+      <button class="btn btn-primary"><i class="fa fa-save"></i> 添加</button>
      
     </div>
   </div>
-        </div>
-      </div>
+</div>
 
 
 
-    </div>
 @endsection

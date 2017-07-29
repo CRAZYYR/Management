@@ -67,3 +67,10 @@ Route::get('help', function(){
      // 前台服务员销售管理
 Route::resource('waiter', 'Page\Page\pageController');
 Route::get('updatepw', 'Page\Page\pageController@updatepw');
+
+
+// 服务员看到的会员信息
+// pagevipController
+Route::resource('pagevip', 'Page\Page\pagevipController');
+Route::get('updatemypw', 'Page\Page\pagevipController@updatemypw');
+Route::post('pageupdatepw', 'Page\Page\pagevipController@updatepw');

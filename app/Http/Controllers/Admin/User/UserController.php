@@ -60,7 +60,7 @@ class UserController extends Controller
         if (!$input['uname'] || !$input['upw'] || !$input['uaccount']) {
              return back()->with('error','添加账户失败!');
         }
-        
+       
         $input['uip']=$_SERVER["REMOTE_ADDR"];
         $input['utime']=time();
         $input['upw']=md5(md5($input['upw']));

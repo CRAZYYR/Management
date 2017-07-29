@@ -106,7 +106,7 @@
               <ul class="dropdown-menu">
                 <li><a href="">{{$uinfo['account']}}</a></li>
                  <li class="divider"></li>
-                <li><a href="{{url('waiter')}}">修改密码</a></li>
+                <li><a href="{{url('updatemypw')}}">修改密码</a></li>
                 <li class="divider"></li>
                 <li><a tabindex="-1" href="{{url('loginout')}}">退出登录</a></li>
               </ul>
@@ -124,7 +124,7 @@
     <li><ul class="dashboard-menu nav nav-list collapse in">
             <li><a href="{{url('waiter')}}"><span class="fa fa-caret-right"></span>销售基本信息</a></li>
             <li ><a href="{{url('waiter')}}/create"><span class="fa fa-caret-right"></span> 记录账单</a></li>
-                <li ><a href="users.html"><span class="fa fa-caret-right"></span> VIP会员信息</a></li>
+                <li ><a href="{{url('pagevip')}}"><span class="fa fa-caret-right"></span> VIP会员信息</a></li>
 
        
     </ul></li>
