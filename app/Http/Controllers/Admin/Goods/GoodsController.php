@@ -58,8 +58,12 @@ class GoodsController extends Controller
             return redirect('login');
         }
        $input= Input::except('_token');
-     
+        // dd($input);
        $rs=Goods::insertGetId($input);
+       $goodcache=$input;
+       
+       $goodcache['gid']=$rs;
+        Goods_Cache::insert($goodcache);
        if ($rs) {
         $pz['pname']=$input['gname'];
         $pz['pmonth']=date('Ym',time());
@@ -67,6 +71,7 @@ class GoodsController extends Controller
         $pz['pgid']=$rs;
 
           Pz::insert($pz);
+
           return back()->with('error','添加品牌成功!');
        }else{
           return back()->with('error','添加品牌失败!');

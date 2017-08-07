@@ -95,10 +95,10 @@ class pageController extends Controller
             }
 
             // 数据插入到usermonth表中
-//$this->InsertToUserMonth($input);
+$this->InsertToUserMonth($input);
            
             // 将数据插入到PZ表中
-      // $this->InsertToPz($input,$pname);
+      $this->InsertToPz($input,$pname);
 
         // 将数据插入到mounth 表中
             $this->InsertToMonth($input);

@@ -22,12 +22,12 @@ class StockController extends Controller
      */
     public function index()
     {
-                $saleinfo=[];
-        $mtime=Agoods::select('agdata')->orderBy('agdata','desc')->distinct()->get();
-        $goods=  Goods_Cache::where(array('lid'=>0))->get();
+         $saleinfo=[];
+     $mtime=Agoods::select('agdata')->orderBy('agdata','desc')->distinct()->get();
+        $goods=Goods_Cache::where(array('lid'=>0))->get();
        
-           $joins=Agoods::where('agoods.agdata',date('Ym',time()))->join('goods_cache', 'goods_cache.gid', '=', 'agoods.gid')->orderBy('agoods.agnumber','desc')->get();
-
+      $joins=Agoods::where('agoods.agdata',date('Ym',time())-1)->join('goods_cache', 'goods_cache.gid', '=', 'agoods.gid')->orderBy('agoods.agnumber','desc')->get();
+           // dd($joins);
                 foreach($goods as $good){
              foreach($joins as $k => $join){
 
